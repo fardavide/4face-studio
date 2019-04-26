@@ -14,12 +14,11 @@ import string from "../res/strings";
  * @author Davide Giuseppe Farella
  */
 export const AppBar = props => {
-
   /**
    * Elevation for {AppBar}
    * @type {string}
    */
-  const elevation = props.isAtTop ? 'none' : 'small';
+  const elevation = props.isAtTop ? "none" : "small";
 
   /**
    * Item color for the {AppBar}
@@ -51,6 +50,7 @@ export const AppBar = props => {
       background={color.background}
       elevation={elevation}
       pad={{ left: "medium", right: "small", vertical: "small" }}
+      style={{ zIndex: "1" }}
       {...props}
     >
       <Button icon={menuIcon()} onClick={onMenuClick} />
@@ -69,5 +69,5 @@ export const AppBar = props => {
 AppBar.props = {
   isAtTop: PropTypes.bool.isRequired,
   isMenuOpen: PropTypes.bool.isRequired,
-  onMenuClick: PropTypes.func.isRequired,
+  onMenuClick: PropTypes.func.isRequired
 };

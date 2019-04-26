@@ -1,13 +1,17 @@
 import { useEffect, useState } from "react";
 
 export const useToggle = initialValue => {
-  const [value, setValue] = useState(initialValue)
+  const [value, setValue] = useState(initialValue);
 
-  const flipValue = (optionalValue = !value) => setValue(optionalValue)
+  const flipValue = (optionalValue = !value) => setValue(optionalValue);
 
-  return [value, flipValue]
-}
+  return [value, flipValue];
+};
 
+/**
+ * Detect whether the page is at top-scroll position
+ * @param initialValue {boolean} default value before the listener has been triggered
+ */
 export const useTopDetector = initialValue => {
   const [isAtTop, setIsAsTop] = useState(initialValue);
 
