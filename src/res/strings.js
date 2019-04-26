@@ -200,8 +200,8 @@ const strings = {
 
     /** Copyright info */
     copyright: {
-      en: "Copyright © 4face Studio 2018",
-      it: "Copyright © 4face Studio 2018"
+      en: "Copyright © 4face Studio 2019",
+      it: "Copyright © 4face Studio 2019"
     }
   }
 };
