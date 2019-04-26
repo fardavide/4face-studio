@@ -61,9 +61,18 @@ const strings = {
     }
   },
 
+  /** Projects section */
+  projects: {
+    /** Title of Projects section */
+    title: {
+      en: "My Projects",
+      it: "I miei progetti"
+    }
+  },
+
   /** Contact section */
   contact: {
-    /** Title of the Contact section */
+    /** Title of Contact section */
     title: {
       en: "Contact me",
       it: "Contattami"
@@ -186,7 +195,7 @@ const strings = {
           en: "Type a message",
           it: "Inserisci un messaggio"
         }
-      },
+      }
     }
   },
 

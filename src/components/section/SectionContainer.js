@@ -31,7 +31,7 @@ export const SectionContainer = props => {
    */
   const width = size => {
     if (size === 'large') return 'xxlarge';
-    else return 'auto';
+    else return '100%';
   };
 
   return (
