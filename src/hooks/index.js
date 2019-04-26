@@ -1,5 +1,13 @@
 import { useEffect, useState } from "react";
 
+export const useToggle = initialValue => {
+  const [value, setValue] = useState(initialValue)
+
+  const flipValue = () => setValue(!value)
+
+  return [value, flipValue]
+}
+
 export const useTopDetector = initialValue => {
   const [isAtTop, setIsAsTop] = useState(initialValue);
 

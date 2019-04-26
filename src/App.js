@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Box, Grommet} from "grommet";
-import {useTopDetector} from "./hooks"
+import {useTopDetector, useToggle} from "./hooks"
 
 import {AboutSection} from "./components/section/AboutSection";
 import {AppBar} from "./components/AppBar";
@@ -36,19 +36,19 @@ const App = () => {
    * Whether the side menu is open
    * @type {boolean}
    */
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, flipValue] = useToggle(false)
 
   return (
     <Grommet theme={theme}>
       <Box fill flex>
         <Drawer
           isMenuOpen={isMenuOpen}
-          onMenuClose={() => setIsMenuOpen(false)}
+          onMenuClose={() => flipValue()}
         />
         <AppBar
           isAtTop={isAtTop}
           isMenuOpen={isMenuOpen}
-          onMenuClick={() => setIsMenuOpen(true)}
+          onMenuClick={() => flipValue()}
         />
         <AppBodyContainer>
           <AboutSection />
