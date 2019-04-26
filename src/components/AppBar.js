@@ -43,6 +43,7 @@ export const AppBar = props => {
 
   return (
     <Box
+      className="sticky"
       tag="header"
       direction="row"
       align="center"
@@ -50,7 +51,6 @@ export const AppBar = props => {
       background={color.background}
       elevation={elevation}
       pad={{ left: "medium", right: "small", vertical: "small" }}
-      style={{ zIndex: "1", position: "sticky", top: 0 }}
       {...props}
     >
       <Button icon={menuIcon()} onClick={onMenuClick} />

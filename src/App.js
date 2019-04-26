@@ -7,6 +7,7 @@ import { AppBodyContainer } from "./components/AppBodyContainer";
 import { ContactSection } from "./components/section/ContactSection";
 import { Drawer } from "./components/Drawer";
 import { Footer } from "./components/Footer";
+import { useTopDetector } from "./hooks"
 
 const theme = {
   global: {
@@ -24,68 +25,39 @@ const theme = {
  *
  * @author Davide Giuseppe Farella
  */
-class App extends Component {
-  /** State of the {App} component */
-  state = {
-    /**
-     * Whether the website is at the top position or scrolled down
-     * @type {boolean}
-     */
-    isAtTop: true,
-    /**
-     * Whether the side menu is open
-     * @type {boolean}
-     */
-    isMenuOpen: false
-  };
+const App = () => {
+  /**
+ * Whether the website is at the top position or scrolled down
+ * @type {boolean}
+ */
+  const isAtTop = useTopDetector(true)
 
-  render() {
-    const { isAtTop, isMenuOpen } = this.state;
+  /**
+ * Whether the side menu is open
+ * @type {boolean}
+ */
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
-    return (
-      <Grommet theme={theme}>
-        <Box fill flex>
-          <Drawer
-            isMenuOpen={isMenuOpen}
-            onMenuClose={() => this.setState({ isMenuOpen: false })}
-          />
-          <AppBar
-            isAtTop={isAtTop}
-            isMenuOpen={isMenuOpen}
-            onMenuClick={() => this.setState({ isMenuOpen: !isMenuOpen })}
-          />
-          <AppBodyContainer>
-            <AboutSection />
-            <ContactSection />
-          </AppBodyContainer>
-          <Footer />
-        </Box>
-      </Grommet>
-    );
-  }
-
-  componentDidMount() {
-    window.addEventListener("scroll", this.listenToScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.listenToScroll);
-  }
-
-  listenToScroll = () => {
-    const winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop;
-
-    const height =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
-
-    const scrolled = winScroll / height;
-
-    this.setState({
-      isAtTop: !scrolled
-    });
-  };
+  return (
+    <Grommet theme={theme}>
+      <Box fill flex>
+        <Drawer
+          isMenuOpen={isMenuOpen}
+          onMenuClose={() => setIsMenuOpen(false)}
+        />
+        <AppBar
+          isAtTop={isAtTop}
+          isMenuOpen={isMenuOpen}
+          onMenuClick={() => setIsMenuOpen(true)}
+        />
+        <AppBodyContainer>
+          <AboutSection />
+          <ContactSection />
+        </AppBodyContainer>
+        <Footer />
+      </Box>
+    </Grommet>
+  )
 }
 
 export default App;
