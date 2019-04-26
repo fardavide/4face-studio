@@ -1,11 +1,10 @@
 import React from "react";
-import { Box, Button, Heading } from "grommet";
+import { Box } from "grommet";
 
-import { Close, Menu } from "grommet-icons";
+import { CaptionText } from "./typography";
 
 import { color } from "../res/colors";
 import string from "../res/strings";
-import { CaptionText } from "./typography";
 
 /**
  * A {React.Component} for Footer of the App
@@ -18,7 +17,7 @@ export const Footer = props => (
     flex
     align="center"
     background={color.background}
-    pad='large'
+    pad="large"
     style={{ zIndex: "1" }}
     {...props}
   >

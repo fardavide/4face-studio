@@ -1,13 +1,12 @@
 import React from "react";
-import {Box, Grid, ResponsiveContext} from "grommet";
-
-import {Card} from "../widget/Card";
-import {ContentText, SubtitleText} from "../typography";
-import {SectionContainer} from "./SectionContainer";
-import {RoundedImage} from "../RoundedImage";
+import { Box, Grid, ResponsiveContext } from "grommet";
+import { ContentText, SubtitleText } from "../typography";
+import { SectionContainer } from "./SectionContainer";
+import { RoundedImage } from "../RoundedImage";
 
 import me from "../../res/images/me.jpg";
 import string from "../../res/strings";
+import { SectionCard } from "../widget/SectionCard";
 
 /**
  * A {React.Component} for About Section
@@ -37,7 +36,7 @@ export const AboutSection = props => {
     <ResponsiveContext.Consumer>
       {size => (
         <SectionContainer>
-          <Card pad="medium">
+          <SectionCard>
             <Grid
               fill="horizontal"
               rows={["xxsmall", "small"]}
@@ -59,7 +58,7 @@ export const AboutSection = props => {
                 <ContentText>{string("about.bio")}</ContentText>
               </Box>
             </Grid>
-          </Card>
+          </SectionCard>
         </SectionContainer>
       )}
     </ResponsiveContext.Consumer>

@@ -1,76 +1,47 @@
 import React from "react";
-import { Box, Form, FormField, ResponsiveContext, TextArea } from "grommet";
-
-import { PrimaryButton } from "../widget/PrimaryButton";
+import { Box, Image, ResponsiveContext } from "grommet";
 import { SectionContainer } from "./SectionContainer";
 import { SectionHeader } from "./SectionHeader";
 
-import { Send } from "grommet-icons";
-
-import email from "../../res/images/email.svg";
+import projects from "../../res/images/projects.svg";
+import placeholder_github from "../../res/images/placeholder-github.svg";
 import string from "../../res/strings";
+import { SectionCard } from "../widget/SectionCard";
 
 /**
- * A {React.Component} for Contact Section
+ * A {React.Component} for Projects Section
  * @param props
  *
  * @author Davide Giuseppe Farella
  */
-export const ContactSection = props => {
+export const ProjectsSection = props => {
+  /**
+   * @return {React.Component} of a placeholder image showing the GitHub logo.
+   * @param props
+   * @constructor
+   */
+  const GithubPlaceHolder = props => (
+    <Box width="xsmall" height="xsmall">
+      <Image src={placeholder_github} fit="cover" opacity="medium" {...props} />
+    </Box>
+  );
+
   /**
    * @return {string} horizontal pad of the Form
    * @param size {string} screen size
    */
   const horizontalPad = size => {
     if (size === "large") return "25%";
-    else if (size === "medium") return "20%";
-    else if (size === "small") return "10%";
   };
 
   return (
     <ResponsiveContext.Consumer>
       {size => (
         <SectionContainer>
-          <SectionHeader image={email} title={string("contact.title")} />
-          <Box pad={{ horizontal: horizontalPad(size) }}>
-            <Form>
-              <FormField
-                name="name"
-                label={string("contact.form.name")}
-                placeholder={string("contact.form.name.hint")}
-                required={true}
-                validate={validateName}
-              />
-              <FormField
-                name="email"
-                label={string("contact.form.email")}
-                placeholder={string("contact.form.email.hint")}
-                required={true}
-                validate={validateEmail}
-              />
-              <FormField
-                name="phone"
-                label={string("contact.form.phone")}
-                placeholder={string("contact.form.phone.hint")}
-              />
-              <FormField
-                name="message"
-                label={string("contact.form.message")}
-                placeholder={string("contact.form.message.hint")}
-                required={true}
-                validate={validateMessage}
-                as={TextArea}
-              />
-              <Box fill="horizontal">
-                <PrimaryButton
-                  type="submit"
-                  label={string("action.send")}
-                  icon={<Send />}
-                  margin="medium"
-                />
-              </Box>
-            </Form>
-          </Box>
+          <SectionHeader image={projects} title={string("projects.title")} />
+          <SectionCard margin={{ top: "small" }}>
+            <GithubPlaceHolder />
+          </SectionCard>
         </SectionContainer>
       )}
     </ResponsiveContext.Consumer>
