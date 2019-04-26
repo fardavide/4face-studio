@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import { Box, Grommet } from "grommet";
+import React, {Component} from "react";
+import {Box, Grommet} from "grommet";
+import {useTopDetector} from "./hooks"
 
-import { AboutSection } from "./components/section/AboutSection";
-import { AppBar } from "./components/AppBar";
-import { AppBodyContainer } from "./components/AppBodyContainer";
-import { ContactSection } from "./components/section/ContactSection";
-import { Drawer } from "./components/Drawer";
-import { Footer } from "./components/Footer";
-import { useTopDetector } from "./hooks"
+import {AboutSection} from "./components/section/AboutSection";
+import {AppBar} from "./components/AppBar";
+import {AppBodyContainer} from "./components/AppBodyContainer";
+import {ContactSection} from "./components/section/ContactSection";
+import {Drawer} from "./components/Drawer";
+import {Footer} from "./components/Footer";
 
 const theme = {
   global: {
@@ -27,16 +27,16 @@ const theme = {
  */
 const App = () => {
   /**
- * Whether the website is at the top position or scrolled down
- * @type {boolean}
- */
-  const isAtTop = useTopDetector(true)
+   * Whether the website is at the top position or scrolled down
+   * @type {boolean}
+   */
+  const isAtTop = useTopDetector(true);
 
   /**
- * Whether the side menu is open
- * @type {boolean}
- */
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
+   * Whether the side menu is open
+   * @type {boolean}
+   */
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
     <Grommet theme={theme}>
@@ -58,6 +58,6 @@ const App = () => {
       </Box>
     </Grommet>
   )
-}
+};
 
 export default App;

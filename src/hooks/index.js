@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
 export const useTopDetector = initialValue => {
-  const [isAtTop, setIsAsTop] = useState(initialValue)
+  const [isAtTop, setIsAsTop] = useState(initialValue);
 
   useEffect(() => {
-
     const listenToScroll = () => {
       const winScroll =
         document.body.scrollTop || document.documentElement.scrollTop;
@@ -22,9 +21,8 @@ export const useTopDetector = initialValue => {
 
     return () => {
       window.removeEventListener("scroll", listenToScroll);
-    }
+    };
+  }, []);
 
-  }, [])
-
-  return isAtTop
-}
+  return isAtTop;
+};

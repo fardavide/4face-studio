@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Form, FormField, TextArea } from "grommet";
+import { Box, Form, FormField, ResponsiveContext, TextArea } from "grommet";
 
 import { PrimaryButton } from "../widget/PrimaryButton";
 import { SectionContainer } from "./SectionContainer";
@@ -16,48 +16,64 @@ import string from "../../res/strings";
  *
  * @author Davide Giuseppe Farella
  */
-export const ContactSection = props => (
-  <SectionContainer>
-    <SectionHeader image={email} title={string("contact.title")} />
-    <Form>
-      <FormField
-        name="name"
-        label={string("contact.form.name")}
-        placeholder={string("contact.form.name.hint")}
-        required={true}
-        validate={validateName}
-      />
-      <FormField
-        name="email"
-        label={string("contact.form.email")}
-        placeholder={string("contact.form.email.hint")}
-        required={true}
-        validate={validateEmail}
-      />
-      <FormField
-        name="phone"
-        label={string("contact.form.phone")}
-        placeholder={string("contact.form.phone.hint")}
-      />
-      <FormField
-        name="message"
-        label={string("contact.form.message")}
-        placeholder={string("contact.form.message.hint")}
-        required={true}
-        validate={validateMessage}
-        as={TextArea}
-      />
-      <Box fill="horizontal">
-        <PrimaryButton
-          type="submit"
-          label={string("action.send")}
-          icon={<Send />}
-          margin="medium"
-        />
-      </Box>
-    </Form>
-  </SectionContainer>
-);
+export const ContactSection = props => {
+  /**
+   * @return {string} horizontal pad of the Form
+   * @param size {string} screen size
+   */
+  const horizontalPad = size => {
+    if (size === "large") return "25%";
+  };
+
+  return (
+    <ResponsiveContext.Consumer>
+      {size => (
+        <SectionContainer>
+          <SectionHeader image={email} title={string("contact.title")} />
+          <Box pad={{ horizontal: horizontalPad(size) }}>
+            <Form>
+              <FormField
+                name="name"
+                label={string("contact.form.name")}
+                placeholder={string("contact.form.name.hint")}
+                required={true}
+                validate={validateName}
+              />
+              <FormField
+                name="email"
+                label={string("contact.form.email")}
+                placeholder={string("contact.form.email.hint")}
+                required={true}
+                validate={validateEmail}
+              />
+              <FormField
+                name="phone"
+                label={string("contact.form.phone")}
+                placeholder={string("contact.form.phone.hint")}
+              />
+              <FormField
+                name="message"
+                label={string("contact.form.message")}
+                placeholder={string("contact.form.message.hint")}
+                required={true}
+                validate={validateMessage}
+                as={TextArea}
+              />
+              <Box fill="horizontal">
+                <PrimaryButton
+                  type="submit"
+                  label={string("action.send")}
+                  icon={<Send />}
+                  margin="medium"
+                />
+              </Box>
+            </Form>
+          </Box>
+        </SectionContainer>
+      )}
+    </ResponsiveContext.Consumer>
+  );
+};
 
 // noinspection JSUnusedLocalSymbols // form not used
 /**
