@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export const useToggle = initialValue => {
   const [value, setValue] = useState(initialValue)
 
-  const flipValue = () => setValue(!value)
+  const flipValue = (optionalValue = !value) => setValue(optionalValue)
 
   return [value, flipValue]
 }

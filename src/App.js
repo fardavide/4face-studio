@@ -43,12 +43,12 @@ const App = () => {
       <Box fill flex>
         <Drawer
           isMenuOpen={isMenuOpen}
-          onMenuClose={() => flipValue()}
+          onMenuClose={flipValue}
         />
         <AppBar
           isAtTop={isAtTop}
           isMenuOpen={isMenuOpen}
-          onMenuClick={() => flipValue()}
+          onMenuClick={flipValue}
         />
         <AppBodyContainer>
           <AboutSection />
