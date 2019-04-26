@@ -50,11 +50,10 @@ export const AppBar = props => {
       background={color.background}
       elevation={elevation}
       pad={{ left: "medium", right: "small", vertical: "small" }}
-      style={{ zIndex: "1" }}
+      style={{ zIndex: "1", position: "sticky", top: 0 }}
       {...props}
     >
       <Button icon={menuIcon()} onClick={onMenuClick} />
-
       <Heading
         level="3"
         margin={{ left: "medium", vertical: "none" }}
