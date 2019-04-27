@@ -12,7 +12,7 @@ import {
  *
  * @author Davide Giuseppe Farella
  */
-const strings = {
+export const strings = {
   /** Test purpose only */
   test: {
     en: "english",
@@ -67,6 +67,129 @@ const strings = {
     title: {
       en: "My Projects",
       it: "I miei progetti"
+    },
+
+    /** The actual list of projects */
+    item: {
+      /** Fresh Tv app */
+      freshTv: {
+        title: {
+          en: "",
+          it: ""
+        },
+        description: {
+          en: "",
+          it: ""
+        },
+        icon: {
+          en: "",
+          it: ""
+        },
+        link: {
+          en: "",
+          it: ""
+        },
+        type: {
+          en: "App",
+          it: "App"
+        }
+      },
+
+      /** Theia library */
+      theia: {
+        title: {
+          en: "",
+          it: ""
+        },
+        description: {
+          en: "",
+          it: ""
+        },
+        icon: {
+          en: "",
+          it: ""
+        },
+        link: {
+          en: "",
+          it: ""
+        },
+        type: {
+          en: "Lib",
+          it: "Lib"
+        }
+      },
+
+      /** View State Store library */
+      viewStateStore: {
+        title: {
+          en: "",
+          it: ""
+        },
+        description: {
+          en: "",
+          it: ""
+        },
+        icon: {
+          en: "",
+          it: ""
+        },
+        link: {
+          en: "",
+          it: ""
+        },
+        type: {
+          en: "Lib",
+          it: "Lib"
+        }
+      },
+
+      /** Material Bottom Bar library */
+      materialBottomBar: {
+        title: {
+          en: "",
+          it: ""
+        },
+        description: {
+          en: "",
+          it: ""
+        },
+        icon: {
+          en: "",
+          it: ""
+        },
+        link: {
+          en: "",
+          it: ""
+        },
+        type: {
+          en: "Lib",
+          it: "Lib"
+        }
+      },
+
+      /** Fluent Notifications library */
+      fluentNotifications: {
+        title: {
+          en: "",
+          it: ""
+        },
+        description: {
+          en: "",
+          it: ""
+        },
+        icon: {
+          en: "",
+          it: ""
+        },
+        link: {
+          en: "",
+          it: ""
+        },
+        type: {
+          en: "Lib",
+          it: "Lib"
+        }
+      }
     }
   },
 
@@ -217,31 +340,75 @@ const strings = {
 
 /**
  * Get a {string} properly translated from {strings}
- * @param name name of the {string} to retrieve
- * @param lang requested language for {name} {string}. Default is 'en'
+ *
+ * @param field {string/*} value to retrieve
+ * It could be {string} name the {string} to get, or direct object pointing to the {string} to get.
+ *
+ * @param lang {string/undefined} requested language for {name} {string}.
+ * Default is 'en'
+ *
  * @return {string}
+ *
+ * @throws StringNotDefinedError
+ * @throws TranslationNotDefinedError
  */
-export default (name, lang) => {
+export default (field, lang) => {
   // Use 'en' as default if 'lang' is not defined
   if (!lang) lang = "en";
 
-  // Split name by '.' for find nested objects
-  const nameParts = name.split(".");
-  let untranslatedString = strings;
-  nameParts.forEach(part => {
-    untranslatedString = untranslatedString[part];
-
-    // Throw StringNotDefinedError if value is not found
-    if (!untranslatedString) throw StringNotDefinedError(name);
-
-    return untranslatedString;
-  });
+  let untranslatedString;
+  if (isString(field)) untranslatedString = getByString(field);
+  else untranslatedString = getByObject(field);
 
   // Find the right translation
   const result = untranslatedString[lang];
 
   // Throw TranslationNotDefinedError if translation is not found
-  if (!result) throw TranslationNotDefinedError(name, lang);
+  if (!result) throw TranslationNotDefinedError(field, lang);
 
   return result;
 };
+
+/**
+ * Get an untranslated string from a {string} name ( {stringField} )
+ * @param stringField {string} name of the {string} to get
+ * @return {Object}
+ *
+ * @throws StringNotDefinedError
+ */
+const getByString = stringField => {
+  // Split name by '.' for find nested objects
+  const nameParts = stringField.split(".");
+  let untranslatedString = strings;
+  nameParts.forEach(part => {
+    untranslatedString = untranslatedString[part];
+
+    // Throw StringNotDefinedError if value is not found
+    if (!untranslatedString) throw StringNotDefinedError(stringField);
+
+    return untranslatedString;
+  });
+
+  return untranslatedString;
+};
+
+/**
+ * Get an untranslated string from a {*} field ( {objField} )
+ * @param objField {*} field of the {string} to get
+ * @return {Object}
+ *
+ * @throws StringNotDefinedError
+ */
+const getByObject = objField => {
+  // Throw StringNotDefinedError if the given objField does not exist
+  if (!objField) throw StringNotDefinedError(objField);
+
+  return objField;
+};
+
+/**
+ * Get whether the given {obj} is a {string}
+ * @param obj the object to check
+ * @return {boolean} `true` if {obj} is a {string}
+ */
+const isString = obj => typeof obj === "string" || obj instanceof String;
