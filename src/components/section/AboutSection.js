@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Grid, ResponsiveContext } from "grommet";
-import { ContentText, SubtitleText } from "../typography";
+import {ContentText, SubtitleText, TitleText} from "../typography";
 import { SectionContainer } from "./SectionContainer";
 import { RoundedImage } from "../RoundedImage";
 
