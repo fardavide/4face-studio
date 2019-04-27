@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Box, Image, ResponsiveContext } from "grommet";
 
-import { TitleText } from "../typography";
+import { HeaderText } from "../typography";
 
 /**
  * A {React.Component} for Header of Section. Must be inside {SectionContainer}
@@ -20,6 +20,11 @@ export const SectionHeader = props => {
     else return "xlarge";
   };
 
+  const iconSize = size => {
+    if (size === "small") return "xxsmall";
+    else return "xsmall";
+  };
+
   return (
     <ResponsiveContext.Consumer>
       {size => (
@@ -29,10 +34,10 @@ export const SectionHeader = props => {
           gap={gap(size)}
           margin={{ bottom: "medium" }}
         >
-          <Box width="xsmall" height="xsmall">
+          <Box width={iconSize(size)} height={iconSize(size)}>
             <Image src={props.image} fit="cover" {...props} />
           </Box>
-          <TitleText {...props}>{props.title}</TitleText>
+          <HeaderText {...props}>{props.title}</HeaderText>
         </Box>
       )}
     </ResponsiveContext.Consumer>

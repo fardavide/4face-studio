@@ -13,14 +13,22 @@
  * @author Davide Giuseppe Farella
  */
 class Palette {
-  constructor( primary, secondary, tertiary, background, onBackground, surface, onSurface ) {
+  constructor(
+    primary,
+    secondary,
+    tertiary,
+    background,
+    onBackground,
+    surface,
+    onSurface
+  ) {
     this.primary = primary;
     this.secondary = secondary;
     this.tertiary = tertiary;
     this.background = background;
     this.onBackground = onBackground;
     this.surface = surface;
-    this.onSurface = onSurface
+    this.onSurface = onSurface;
   }
 }
 
@@ -30,22 +38,22 @@ class Palette {
  */
 const palettes = {
   vividLight: new Palette(
-    '#00A3ED',
-    '#3BC08E',
-    '#7BFAC4',
-    '#FDFDFD',
-    '#444444',
-    '#FFFFFF',
-    '#666666'
+    "#00A3ED",
+    "#FA6F58",
+    "#3BC08E",
+    "#FDFDFD",
+    "#444444",
+    "#FFFFFF",
+    "#666666"
   ),
   vividDark: new Palette(
-    '#00A3ED',
-    '#3BC08E',
-    '#7BFAC4',
-    '#272727',
-    '#EEEEEE',
-    '#444444',
-    '#FDFDFD'
+    "#00A3ED",
+    "#FA6F58",
+    "#3BC08E",
+    "#272727",
+    "#EEEEEE",
+    "#444444",
+    "#FDFDFD"
   )
 };
 

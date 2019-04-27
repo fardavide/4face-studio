@@ -1,11 +1,11 @@
 import expect from "expect";
-import { strings } from "../res/strings";
+import projects from "../res/projects";
 import ProjectsSource from "./ProjectsSource";
 
-const source = new ProjectsSource(strings.projects.item);
+const source = new ProjectsSource(projects);
 
 it("right projects count", () => {
-  expect(source.count()).toStrictEqual(5);
+  expect(source.count()).toStrictEqual(Object.keys(projects).length);
 });
 
 it("'all' function does not crash", () => {
