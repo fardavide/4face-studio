@@ -97,7 +97,6 @@ export const validateName = (nameForm, form) => {
   // Return short error if one of the names inserted is shorter that 3 chars
   let shortError = null;
   names.forEach(name => {
-    console.log(`${name} - ${name.length}`);
     if (name.length < 3) shortError = string("contact.form.name.error.short");
   });
   return shortError;
