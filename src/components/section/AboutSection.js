@@ -1,12 +1,13 @@
 import React from "react";
 import { Box, Grid, ResponsiveContext } from "grommet";
-import {ContentText, SubtitleText, TitleText} from "../typography";
+import { ContentText, SubtitleText } from "../typography";
 import { SectionContainer } from "./SectionContainer";
-import { RoundedImage } from "../RoundedImage";
+import RoundedImage from "../widget/RoundedImage";
+
+import { SectionCard } from "../widget/SectionCard";
 
 import me from "../../res/images/me.jpg";
 import string from "../../res/strings";
-import { SectionCard } from "../widget/SectionCard";
 
 /**
  * A {React.Component} for About Section

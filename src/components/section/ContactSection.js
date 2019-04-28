@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Form, FormField, ResponsiveContext, TextArea } from "grommet";
 
-import { PrimaryButton } from "../widget/PrimaryButton";
+import PrimaryButton from "../widget/PrimaryButton";
 import { SectionContainer } from "./SectionContainer";
 import { SectionHeader } from "./SectionHeader";
 
@@ -33,7 +33,7 @@ export const ContactSection = props => {
         <SectionContainer>
           <SectionHeader image={email} title={string("contact.title")} />
           <Box pad={{ horizontal: horizontalPad(size) }}>
-            <Form>
+            <Form onSubmit='contact_me.php'>
               <FormField
                 name="name"
                 label={string("contact.form.name")}

@@ -37,6 +37,10 @@ export const strings = {
     send: {
       en: "Send",
       it: "Invia"
+    },
+    gitHub: {
+      en: "Open on GitHub",
+      it: "Apri su GitHub"
     }
   },
 
@@ -67,7 +71,7 @@ export const strings = {
     title: {
       en: "My Projects",
       it: "I miei progetti"
-    },
+    }
   },
 
   /** Contact section */

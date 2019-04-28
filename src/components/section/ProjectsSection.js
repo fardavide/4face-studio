@@ -3,24 +3,20 @@ import PropTypes from "prop-types";
 
 import { Box, Image, ResponsiveContext } from "grommet";
 
-import { Card } from "../widget/Card";
+import Card from "../widget/Card";
 import FlexGrid from "../widget/FlexGrid";
+import PrimaryButton from "../widget/PrimaryButton";
 import { SectionContainer } from "./SectionContainer";
 import { SectionHeader } from "./SectionHeader";
 
-import {
-  CaptionText,
-  ContentText,
-  LabelText,
-  SubtitleText,
-  TitleText
-} from "../typography";
+import { ContentText, LabelText, SubtitleText } from "../typography";
 
 import ProjectsRepository from "../../data/ProjectsRepository";
 
 import projects from "../../res/images/projects.svg";
 import placeholder_github from "../../res/images/placeholder-github.svg";
-import string from "../../res/strings";
+import string, { strings } from "../../res/strings";
+import { openUrlInNewTab } from "../../utils";
 
 /**
  * @return {React.Component} for Projects Section
@@ -51,8 +47,10 @@ export const ProjectsSection = props => {
    * @param size {string} screen size
    */
   const projectsGap = size => {
-    if (size === "small") return "small";
-    else return "large";
+    return size;
+    // if (size === "small") return "small";
+    // else if (size === "medium") return "medium";
+    // else return "large";
   };
 
   /**
@@ -60,7 +58,9 @@ export const ProjectsSection = props => {
    * @param size {string} screen size
    */
   const projectsRowSize = size => {
-    return "auto";
+    if (size === "small") return "medium";
+    else if (size === "medium") return "medium";
+    else return "medium";
   };
 
   return (
@@ -93,11 +93,12 @@ const repository = new ProjectsRepository();
  */
 const Project = props => {
   /**
-   * @return {string} size of the gap between items for the {Project}s {Box}
+   * @return {string} size of the pad {Project}s {Box}
    * @param size {string} screen size
    */
-  const boxGap = size => {
+  const boxPad = size => {
     if (size === "small") return "small";
+    else if (size === "medium") return "small";
     else return "medium";
   };
 
@@ -126,25 +127,46 @@ const Project = props => {
     else return <GithubPlaceHolder />;
   }
 
-  /** @return {React.Component} title for {Project} */
-  function title() {
-    return <SubtitleText truncate>{props.project.title}</SubtitleText>;
-  }
-
   /**
-   * @return {string} size of the {description} text // TODO size should be inherited from {ContentText}, why it doesn't?
+   * @return {string} top margin for {title} text
    * @param size {string} screen size
    */
-  const descriptionTextSize = size => {
-    if (size === "small") return "small";
+  const titleTopMargin = size => {
+    if (size === "small") return "xxsmall";
+    else return "xsmall";
   };
 
-  /** @return {React.Component} description for {Project} */
-  const description = size => (
-    <ContentText size={descriptionTextSize(size)}>
-      {props.project.description}
-    </ContentText>
-  );
+  /**
+   * @return {React.Component} title for {Project}
+   * @param size {string} screen size
+   */
+  const title = size => {
+    return (
+      <SubtitleText truncate margin={{ top: titleTopMargin() }}>
+        {props.project.title}
+      </SubtitleText>
+    );
+  };
+
+  /**
+   * @return {React.Component} description for {Project}
+   * @param size {string} screen size
+   */
+  const description = size => {
+    /**
+     * // TODO size should be inherited from {ContentText}, why it doesn't?
+     * @return {string} size of the {description} text
+     */
+    const textSize = () => {
+      if (size === "small") return "small";
+    };
+
+    return (
+      <ContentText size={textSize(size)}>
+        {props.project.description}
+      </ContentText>
+    );
+  };
 
   /** @return {React.Component} type for {Project} */
   function type() {
@@ -159,16 +181,33 @@ const Project = props => {
     <ResponsiveContext.Consumer>
       {size => (
         <Card
+          flex
           direction={cardDirection(size)}
-          pad={boxGap(size)}
-          gap={boxGap(size)}
+          pad={boxPad(size)}
           fill={false}
           justify="center"
         >
           {icon()}
-          <Box direction="row" gap="xsmall" justify={textJustify(size)} flex>
-            {type()}
-            {title()}
+          <Box flex>
+            <Box
+              direction="row"
+              gap="xsmall"
+              margin={{ top: titleTopMargin() }}
+              justify={textJustify(size)}
+            >
+              {type()}
+              {title()}
+            </Box>
+            <Box flex fill='vertical'>{description(size)}</Box>
+            <PrimaryButton
+              type="button"
+              label={string(strings.action.gitHub)}
+              margin="xsmall"
+              alignSelf="end"
+              onClick={() => {
+                openUrlInNewTab(props.project.link);
+              }}
+            />
           </Box>
         </Card>
       )}

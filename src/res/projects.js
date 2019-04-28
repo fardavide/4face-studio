@@ -19,12 +19,8 @@ const projects = {
   freshTv: {
     title: "Fresh Tv",
     description: {
-      en:
-        '**Fresh TV** is a project born from a single developer, with the goal of create a new app, simple for every one and with a very _"FRESH" design!_\n' +
-        "The app is built following the guidelines of the **Google Material Design®**.",
-      it:
-        '**Fresh TV** è un progetto nato da un singolo sviluppatore, con l\'obiettivo di creare una nuova app, semplice per chiunque e con uno stile molto _"FRESH"!_\n' +
-        "L'app è creata seguendo le linee guida del **Material Design® di Google©**."
+      en: `is an app for watch **IPTV**, born with the goal of create a new app, simple for every one and with a _"FRESH"_ design!`,
+      it: `è un app per guardare l'**IPTV**, nata con l'obiettivo di creare una nuova app, semplice per chiunque e con uno stile _"FRESH"_!`
     },
     icon: freshTvIcon,
     link: "https://github.com/4face-studi0/FreshTv-android",
@@ -35,8 +31,8 @@ const projects = {
   theia: {
     title: "Theia",
     description: {
-      en: "a",
-      it: "a"
+      en: "is a _lightweight image loader_ for Android with a **cache system** and built-in **Kotlin DSL**",
+      it: "è un _leggerissimo image loader_ con un sistema di cache e con **Kotlin DSL** integrato"
     },
     link: "https://github.com/4face-studi0/Theia",
     type: projectType.lib
@@ -46,8 +42,8 @@ const projects = {
   viewStateStore: {
     title: "View State Store",
     description: {
-      en: "a",
-      it: "a"
+      en: "permits to handle an **unidirectional data-flow** to la UI, wrapping a _LiveData_.",
+      it: "permette di gesture un **flusso dati unidirezionale** verso la UI, wrappando un _LiveData_."
     },
     link: "https://github.com/4face-studi0/ViewStateStore",
     type: projectType.lib
@@ -57,8 +53,8 @@ const projects = {
   materialBottomBar: {
     title: "Material Bottom Bar",
     description: {
-      en: "a",
-      it: "a"
+      en: "lets you implement a customized _BottomAppBar_ and a **bottom drawer** with just few simple steps.",
+      it: "permette di implmentare una _BottomAppBar_ custom con un **bottom drawer** in pochi semplici step."
     },
     link: "https://github.com/4face-studi0/MaterialBottomBar",
     type: projectType.lib
@@ -68,8 +64,8 @@ const projects = {
   fluentNotifications: {
     title: "Fluent Notifications",
     description: {
-      en: "a",
-      it: "a"
+      en: "is an idiomatic **Kotlin DSL** for create _Android's Notification_",
+      it: "è un idiomatico **Kotlin DSL** per creare _Notifiche su Android_"
     },
     link: "https://github.com/4face-studi0/FluentNotifications",
     type: projectType.lib

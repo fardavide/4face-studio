@@ -9,7 +9,7 @@ import { color } from "../../res/colors";
  *
  * @author Davide Giuseppe Farella
  */
-export const Card = props => (
+const Card = props => (
   <Box
     round="medium"
     background={color.surface}
@@ -17,3 +17,4 @@ export const Card = props => (
     {...props}
   />
 );
+ export default Card

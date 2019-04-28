@@ -53,7 +53,7 @@ export const ContentText = props => {
   return (
     <ResponsiveContext.Consumer>
       {size => (
-        <Text alignSelf="center" textAlign="center" size={textSize(size)}>
+        <Text alignSelf="center" textAlign="center" size={textSize(size)} {...props}>
           <Markdown {...props} />
         </Text>
       )}
