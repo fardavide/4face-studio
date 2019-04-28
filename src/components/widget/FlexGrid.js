@@ -45,6 +45,7 @@ const FlexGrid = props => {
       // Declare actual areas and Box's Components
       const areas = [];
       const boxes = [];
+      let iteration = 0;
       // For each row in disposition
       for (let i = 0; i < disposition.length; i++) {
         const rowIndex = i;
@@ -67,7 +68,9 @@ const FlexGrid = props => {
             start: [fromColumn, rowIndex],
             end: [toColumn, rowIndex]
           });
-          boxes.push(<Box gridArea={name}>{items[rowIndex * itemIndex]}</Box>);
+          boxes.push(
+            <Box gridArea={name}>{items[iteration++]}</Box>
+          );
         }
       }
 

@@ -17,7 +17,7 @@ export default class ProjectsRepository {
       .map(
         projectFields =>
           new Project(
-            string(projectFields.title),
+            projectFields.title,
             string(projectFields.description),
             projectFields.icon,
             projectFields.link,

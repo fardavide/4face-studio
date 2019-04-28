@@ -8,7 +8,13 @@ import FlexGrid from "../widget/FlexGrid";
 import { SectionContainer } from "./SectionContainer";
 import { SectionHeader } from "./SectionHeader";
 
-import { ContentText, SubtitleText, TitleText } from "../typography";
+import {
+  CaptionText,
+  ContentText,
+  LabelText,
+  SubtitleText,
+  TitleText
+} from "../typography";
 
 import ProjectsRepository from "../../data/ProjectsRepository";
 
@@ -29,7 +35,7 @@ export const ProjectsSection = props => {
    * @param size {string} screen size
    */
   const maxColumns = size => {
-    if (size === "small") return 1;
+    if (size === "small") return 2;
     else if (size === "medium") return 3;
     else if (size === "large") return 4;
   };
@@ -95,6 +101,24 @@ const Project = props => {
     else return "medium";
   };
 
+  /**
+   * @return {string} direction for {Card}
+   * @param size {string} screen size
+   */
+  const cardDirection = size => {
+    if (size === "small") return "column";
+    else return "column";
+  };
+
+  /**
+   * @return {string} justify type of Text items
+   * @param size {string} screen size
+   */
+  const textJustify = size => {
+    if (size === "small") return "center";
+    else return "center";
+  };
+
   /** @return {React.Component} icon for {Project} */
   function icon() {
     const i = props.project.icon;
@@ -104,7 +128,7 @@ const Project = props => {
 
   /** @return {React.Component} title for {Project} */
   function title() {
-    return <TitleText>{props.project.title}</TitleText>;
+    return <SubtitleText truncate>{props.project.title}</SubtitleText>;
   }
 
   /**
@@ -124,15 +148,25 @@ const Project = props => {
 
   /** @return {React.Component} type for {Project} */
   function type() {
-    return <SubtitleText alignSelf="start">{props.project.type}</SubtitleText>;
+    return (
+      <LabelText color={props.project.type.color} alignSelf="start">
+        {props.project.type.text}
+      </LabelText>
+    );
   }
 
   return (
     <ResponsiveContext.Consumer>
       {size => (
-        <Card pad={boxGap(size)} gap={boxGap(size)} fill={false}>
+        <Card
+          direction={cardDirection(size)}
+          pad={boxGap(size)}
+          gap={boxGap(size)}
+          fill={false}
+          justify="center"
+        >
           {icon()}
-          <Box direction="row" gap="xsmall" justify="center">
+          <Box direction="row" gap="xsmall" justify={textJustify(size)} flex>
             {type()}
             {title()}
           </Box>
@@ -157,18 +191,27 @@ Project.props = {
  */
 const ProjectIcon = props => {
   /**
-   * @return {string} size of the icon.
+   * @return {string} height of the icon.
    * @param size {string} screen size
    */
-  const iconSize = size => {
+  const iconHeight = size => {
     if (size === "small") return "xsmall";
     else return "small";
+  };
+
+  /**
+   * @return {string} width of the icon.
+   * @param size {string} screen size
+   */
+  const iconWidth = size => {
+    if (size === "small") return "auto";
+    else return "auto";
   };
 
   return (
     <ResponsiveContext.Consumer>
       {size => (
-        <Box width="auto" height={iconSize(size)} flex alignSelf="center">
+        <Box width={iconWidth(size)} height={iconHeight(size)} flex>
           <Image fit="center" {...props} />
         </Box>
       )}

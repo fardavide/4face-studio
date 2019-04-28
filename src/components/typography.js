@@ -22,7 +22,12 @@ export const CaptionText = props => {
   return (
     <ResponsiveContext.Consumer>
       {size => (
-        <Text alignSelf="center" textAlign="center" size={textSize(size)}>
+        <Text
+          alignSelf="center"
+          textAlign="center"
+          size={textSize(size)}
+          {...props}
+        >
           <Markdown {...props} />
         </Text>
       )}
@@ -90,6 +95,15 @@ export const HeaderText = props => {
 };
 
 /**
+ * A {React.Component} for Caption Text
+ * @inherit from {CaptionText}
+ * @param props
+ *
+ * @author Davide Giuseppe Farella
+ */
+export const LabelText = props => <CaptionText weight="bold" {...props}/>;
+
+/**
  * A {React.Component} for Subtitle Text
  * @param props
  *
@@ -135,7 +149,8 @@ export const TitleText = props => {
    */
   const textSize = size => {
     if (size === "small") return "large";
-    else return "xlarge";  };
+    else return "xlarge";
+  };
 
   return (
     <ResponsiveContext.Consumer>
