@@ -1,38 +1,60 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import { Box, Image, ResponsiveContext } from "grommet";
 
-import { SectionCard } from "../widget/SectionCard";
+import { Card } from "../widget/Card";
+import FlexGrid from "../widget/FlexGrid";
 import { SectionContainer } from "./SectionContainer";
 import { SectionHeader } from "./SectionHeader";
 
-import { Card } from "../widget/Card";
+import { ContentText, SubtitleText, TitleText } from "../typography";
 
 import ProjectsRepository from "../../data/ProjectsRepository";
-import {
-  CaptionText,
-  ContentText,
-  SubtitleText,
-  HeaderText,
-  TitleText
-} from "../typography";
 
 import projects from "../../res/images/projects.svg";
 import placeholder_github from "../../res/images/placeholder-github.svg";
 import string from "../../res/strings";
 
 /**
- * A {React.Component} for Projects Section
+ * @return {React.Component} for Projects Section
  * @param props
+ * @constructor
  *
  * @author Davide Giuseppe Farella
  */
 export const ProjectsSection = props => {
   /**
-   * @return {string} horizontal pad of the Form
+   * @return {number} number of max columns for the {Project}s {FlexGrid} depending on the screen's size
    * @param size {string} screen size
    */
-  const horizontalPad = size => {
-    if (size === "large") return "25%";
+  const maxColumns = size => {
+    if (size === "small") return 1;
+    else if (size === "medium") return 3;
+    else if (size === "large") return 4;
+  };
+
+  /**
+   * @return {Project[]} from {ProjectsRepository}
+   */
+  const projectItems = () =>
+    repository.all().map(project => <Project project={project} />);
+
+  /**
+   * @return {string} size of the gap between {Project}s for {FlexGrip}
+   * @param size {string} screen size
+   */
+  const projectsGap = size => {
+    if (size === "small") return "small";
+    else return "large";
+  };
+
+  /**
+   * @return {string} size of a single row of {Project}s, regarding the screen's size
+   * @param size {string} screen size
+   */
+  const projectsRowSize = size => {
+    return "auto";
   };
 
   return (
@@ -40,11 +62,12 @@ export const ProjectsSection = props => {
       {size => (
         <SectionContainer>
           <SectionHeader image={projects} title={string("projects.title")} />
-          <Box gap="small" orientation="row">
-            {repository.all().map(project => (
-              <Project project={project} />
-            ))}
-          </Box>
+          <FlexGrid
+            gap={projectsGap(size)}
+            items={projectItems()}
+            columnsLimit={maxColumns(size)}
+            rowHeight={projectsRowSize(size)}
+          />
         </SectionContainer>
       )}
     </ResponsiveContext.Consumer>
@@ -57,6 +80,11 @@ export const ProjectsSection = props => {
  */
 const repository = new ProjectsRepository();
 
+/**
+ * @return {React.Component} for a single {Project}
+ * @param props
+ * @constructor
+ */
 const Project = props => {
   /**
    * @return {string} size of the gap between items for the {Project}s {Box}
@@ -104,7 +132,7 @@ const Project = props => {
       {size => (
         <Card pad={boxGap(size)} gap={boxGap(size)} fill={false}>
           {icon()}
-          <Box direction="row" gap="xsmall" justify='center'>
+          <Box direction="row" gap="xsmall" justify="center">
             {type()}
             {title()}
           </Box>
@@ -112,6 +140,14 @@ const Project = props => {
       )}
     </ResponsiveContext.Consumer>
   );
+};
+
+/**
+ * {PropTypes} for {Project}
+ * @params {{project: Project[]}}
+ */
+Project.props = {
+  project: PropTypes.any.isRequired
 };
 
 /**
@@ -132,8 +168,8 @@ const ProjectIcon = props => {
   return (
     <ResponsiveContext.Consumer>
       {size => (
-        <Box width={iconSize(size)} height={iconSize(size)} alignSelf="center">
-          <Image fit="cover" {...props} />
+        <Box width="auto" height={iconSize(size)} flex alignSelf="center">
+          <Image fit="center" {...props} />
         </Box>
       )}
     </ResponsiveContext.Consumer>
