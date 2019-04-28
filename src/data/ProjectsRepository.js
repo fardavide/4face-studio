@@ -1,7 +1,7 @@
 import Project from "../models/Project";
 import ProjectsSource from "./ProjectsSource";
 
-import { strings } from "../res/strings";
+import projects from "../res/projects";
 import string from "../res/strings";
 
 /**
@@ -19,9 +19,9 @@ export default class ProjectsRepository {
           new Project(
             string(projectFields.title),
             string(projectFields.description),
-            string(projectFields.icon),
-            string(projectFields.link),
-            string(projectFields.type)
+            projectFields.icon,
+            projectFields.link,
+            projectFields.type
           )
       );
   }
@@ -35,4 +35,4 @@ export default class ProjectsRepository {
  * A reference to {ProjectSource} for retrieve Projects
  * @type {ProjectsSource}
  */
-const source = new ProjectsSource(strings.projects.item);
+const source = new ProjectsSource(projects);

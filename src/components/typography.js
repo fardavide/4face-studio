@@ -57,6 +57,39 @@ export const ContentText = props => {
 };
 
 /**
+ * A {React.Component} for Title Text
+ * @param props
+ *
+ * @author Davide Giuseppe Farella
+ */
+export const HeaderText = props => {
+  /**
+   * @return {string} size of the text
+   * @param size {string} screen size
+   */
+  const textSize = size => {
+    if (size === "small") return "xlarge";
+    else return "xxlarge";
+  };
+
+  return (
+    <ResponsiveContext.Consumer>
+      {size => (
+        <Text
+          alignSelf="center"
+          textAlign="center"
+          size={textSize(size)}
+          weight="bold"
+          color={color.primary}
+        >
+          <Markdown {...props} />
+        </Text>
+      )}
+    </ResponsiveContext.Consumer>
+  );
+};
+
+/**
  * A {React.Component} for Subtitle Text
  * @param props
  *
@@ -79,7 +112,8 @@ export const SubtitleText = props => {
           textAlign="center"
           size={textSize(size)}
           weight="bold"
-          color={color.secondary}
+          color={color.tertiary}
+          {...props}
         >
           <Markdown {...props} />
         </Text>
@@ -100,9 +134,8 @@ export const TitleText = props => {
    * @param size {string} screen size
    */
   const textSize = size => {
-    if (size === "small") return "xlarge";
-    else return "xxlarge";
-  };
+    if (size === "small") return "large";
+    else return "xlarge";  };
 
   return (
     <ResponsiveContext.Consumer>
@@ -112,7 +145,8 @@ export const TitleText = props => {
           textAlign="center"
           size={textSize(size)}
           weight="bold"
-          color={color.primary}
+          color={color.secondary}
+          {...props}
         >
           <Markdown {...props} />
         </Text>
