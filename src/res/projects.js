@@ -29,7 +29,115 @@ const projects = {
     icon: freshTvIcon,
     link: "https://github.com/4face-studi0/FreshTv-android",
     type: projectType.app
-  }
+  },
+  /** Fresh Tv app */
+  freshTv2: {
+    title: {
+      en: "Fresh Tv",
+      it: "Fresh Tv"
+    },
+    description: {
+      en:
+        '**Fresh TV** is a project born from a single developer, with the goal of create a new app, simple for every one and with a very _"FRESH" design!_\n' +
+        "The app is built following the guidelines of the **Google Material Design®**.",
+      it:
+        '**Fresh TV** è un progetto nato da un singolo sviluppatore, con l\'obiettivo di creare una nuova app, semplice per chiunque e con uno stile molto _"FRESH"!_\n' +
+        "L'app è creata seguendo le linee guida del **Material Design® di Google©**."
+    },
+    icon: freshTvIcon,
+    link: "https://github.com/4face-studi0/FreshTv-android",
+    type: projectType.app
+  },
+  /** Fresh Tv app */
+  freshTv3: {
+    title: {
+      en: "Fresh Tv",
+      it: "Fresh Tv"
+    },
+    description: {
+      en:
+        '**Fresh TV** is a project born from a single developer, with the goal of create a new app, simple for every one and with a very _"FRESH" design!_\n' +
+        "The app is built following the guidelines of the **Google Material Design®**.",
+      it:
+        '**Fresh TV** è un progetto nato da un singolo sviluppatore, con l\'obiettivo di creare una nuova app, semplice per chiunque e con uno stile molto _"FRESH"!_\n' +
+        "L'app è creata seguendo le linee guida del **Material Design® di Google©**."
+    },
+    icon: freshTvIcon,
+    link: "https://github.com/4face-studi0/FreshTv-android",
+    type: projectType.app
+  },
+  /** Fresh Tv app */
+  freshTv4: {
+    title: {
+      en: "Fresh Tv",
+      it: "Fresh Tv"
+    },
+    description: {
+      en:
+        '**Fresh TV** is a project born from a single developer, with the goal of create a new app, simple for every one and with a very _"FRESH" design!_\n' +
+        "The app is built following the guidelines of the **Google Material Design®**.",
+      it:
+        '**Fresh TV** è un progetto nato da un singolo sviluppatore, con l\'obiettivo di creare una nuova app, semplice per chiunque e con uno stile molto _"FRESH"!_\n' +
+        "L'app è creata seguendo le linee guida del **Material Design® di Google©**."
+    },
+    icon: freshTvIcon,
+    link: "https://github.com/4face-studi0/FreshTv-android",
+    type: projectType.app
+  },
+  /** Fresh Tv app */
+  freshTv5: {
+    title: {
+      en: "Fresh Tv",
+      it: "Fresh Tv"
+    },
+    description: {
+      en:
+        '**Fresh TV** is a project born from a single developer, with the goal of create a new app, simple for every one and with a very _"FRESH" design!_\n' +
+        "The app is built following the guidelines of the **Google Material Design®**.",
+      it:
+        '**Fresh TV** è un progetto nato da un singolo sviluppatore, con l\'obiettivo di creare una nuova app, semplice per chiunque e con uno stile molto _"FRESH"!_\n' +
+        "L'app è creata seguendo le linee guida del **Material Design® di Google©**."
+    },
+    icon: freshTvIcon,
+    link: "https://github.com/4face-studi0/FreshTv-android",
+    type: projectType.app
+  },
+  /** Fresh Tv app */
+  freshTv6: {
+    title: {
+      en: "Fresh Tv",
+      it: "Fresh Tv"
+    },
+    description: {
+      en:
+        '**Fresh TV** is a project born from a single developer, with the goal of create a new app, simple for every one and with a very _"FRESH" design!_\n' +
+        "The app is built following the guidelines of the **Google Material Design®**.",
+      it:
+        '**Fresh TV** è un progetto nato da un singolo sviluppatore, con l\'obiettivo di creare una nuova app, semplice per chiunque e con uno stile molto _"FRESH"!_\n' +
+        "L'app è creata seguendo le linee guida del **Material Design® di Google©**."
+    },
+    icon: freshTvIcon,
+    link: "https://github.com/4face-studi0/FreshTv-android",
+    type: projectType.app
+  },
+  /** Fresh Tv app */
+  freshTv7: {
+    title: {
+      en: "Fresh Tv",
+      it: "Fresh Tv"
+    },
+    description: {
+      en:
+        '**Fresh TV** is a project born from a single developer, with the goal of create a new app, simple for every one and with a very _"FRESH" design!_\n' +
+        "The app is built following the guidelines of the **Google Material Design®**.",
+      it:
+        '**Fresh TV** è un progetto nato da un singolo sviluppatore, con l\'obiettivo di creare una nuova app, semplice per chiunque e con uno stile molto _"FRESH"!_\n' +
+        "L'app è creata seguendo le linee guida del **Material Design® di Google©**."
+    },
+    icon: freshTvIcon,
+    link: "https://github.com/4face-studi0/FreshTv-android",
+    type: projectType.app
+  },
 
   /** Theia library */
   // theia: {
