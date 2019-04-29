@@ -11,8 +11,10 @@ import { color } from "../../res/colors";
  */
 const PrimaryButton = props => (
   <Button
-    color={color.tertiary}
+    type='button'
+    color={color.primary}
     margin="small"
+    fill={false}
     alignSelf="end"
     {...props}
     style={{ zIndex: "1", background: color.surface }}

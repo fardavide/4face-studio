@@ -41,7 +41,7 @@ const palettes = {
     "#00A3ED",
     "#FA6F58",
     "#3BC08E",
-    "#FDFDFD",
+    "#FAFAFA",
     "#444444",
     "#FFFFFF",
     "#666666"

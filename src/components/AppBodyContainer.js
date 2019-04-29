@@ -13,7 +13,7 @@ export const AppBodyContainer = props => (
   <Box
     fill={true}
     overflow={{ horizontal: "hidden" }}
-    pad={{ horizontal: "large", vertical: "small" }}
+    pad={{ vertical: "small" }}
     background={color.background}
     {...props}
   />

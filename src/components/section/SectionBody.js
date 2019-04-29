@@ -7,14 +7,15 @@ import { Box, ResponsiveContext } from "grommet";
  *
  * @author Davide Giuseppe Farella
  */
-export const SectionContainer = props => {
+export const SectionBody = props => {
   /**
    * @return {string} value of pad.horizontal regarding the current screen's size
    * @param size {string} screen size
    */
   const horizontalPad = size => {
+    if (size === "small") return "medium";
     if (size === "medium") return "large";
-    if (size === "large") return "xlarge";
+    if (size === "large") return "300px%";
   };
 
   /**
@@ -30,8 +31,8 @@ export const SectionContainer = props => {
    * @param size {string} screen size
    */
   const width = size => {
-    if (size === 'large') return 'xxlarge';
-    else return '100%';
+    if (size === "large") return "xxlarge";
+    else return "100%";
   };
 
   return (
@@ -39,8 +40,8 @@ export const SectionContainer = props => {
       {size => (
         <Box
           width={width(size)}
-          alignSelf='center'
-          pad={{ vertical: "medium", horizontal: horizontalPad(size) }}
+          alignSelf="center"
+          pad={{ vertical: "small", horizontal: horizontalPad(size) }}
           margin={{
             vertical: "none",
             horizontal: horizontalMargin(size)

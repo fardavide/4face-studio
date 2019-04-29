@@ -12,9 +12,9 @@ import { color } from "../../res/colors";
 const Card = props => (
   <Box
     round="medium"
+    elevation='xsmall'
     background={color.surface}
-    elevation="medium"
     {...props}
   />
 );
- export default Card
+export default Card;

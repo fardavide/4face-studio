@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Box, Grommet } from "grommet";
-import { useTopDetector, useToggle } from "./hooks";
+import { useToggle, useTopDetector } from "./hooks";
 
 import { Drawer } from "./components/Drawer";
 import { AppBar } from "./components/AppBar";
@@ -10,8 +10,14 @@ import { AboutSection } from "./components/section/AboutSection";
 import { ProjectsSection } from "./components/section/ProjectsSection";
 import { ContactSection } from "./components/section/ContactSection";
 import { Footer } from "./components/Footer";
+import { ReferencesSection } from "./components/section/ReferencesSection";
 
 const theme = {
+  button: {
+    border: {
+      radius: '999px'
+    }
+  },
   global: {
     font: {
       family: "Roboto",
@@ -51,6 +57,7 @@ const App = () => {
         />
         <AppBodyContainer>
           <AboutSection />
+          <ReferencesSection />
           <ProjectsSection />
           <ContactSection />
         </AppBodyContainer>

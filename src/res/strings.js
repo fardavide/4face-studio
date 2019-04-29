@@ -65,6 +65,15 @@ export const strings = {
     }
   },
 
+  /** References section */
+  references: {
+    /** Title of References section */
+    title: {
+      en: "Where to find me",
+      it: "Dove trovarmi"
+    }
+  },
+
   /** Projects section */
   projects: {
     /** Title of Projects section */

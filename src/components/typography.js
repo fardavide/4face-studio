@@ -53,7 +53,12 @@ export const ContentText = props => {
   return (
     <ResponsiveContext.Consumer>
       {size => (
-        <Text alignSelf="center" textAlign="center" size={textSize(size)} {...props}>
+        <Text
+          alignSelf="center"
+          textAlign="center"
+          size={textSize(size)}
+          {...props}
+        >
           <Markdown {...props} />
         </Text>
       )}
@@ -85,7 +90,7 @@ export const HeaderText = props => {
           textAlign="center"
           size={textSize(size)}
           weight="bold"
-          color={color.primary}
+          color={color.onBackground}
         >
           <Markdown {...props} />
         </Text>
@@ -101,7 +106,7 @@ export const HeaderText = props => {
  *
  * @author Davide Giuseppe Farella
  */
-export const LabelText = props => <CaptionText weight="bold" {...props}/>;
+export const LabelText = props => <CaptionText weight="bold" {...props} />;
 
 /**
  * A {React.Component} for Subtitle Text

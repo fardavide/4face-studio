@@ -5,7 +5,7 @@ import { Box, Image, ResponsiveContext } from "grommet";
 import { HeaderText } from "../typography";
 
 /**
- * A {React.Component} for Header of Section. Must be inside {SectionContainer}
+ * A {React.Component} for Header of Section. Must be inside {SectionBody}
  * @param props
  *
  * @author Davide Giuseppe Farella
@@ -29,15 +29,17 @@ export const SectionHeader = props => {
     <ResponsiveContext.Consumer>
       {size => (
         <Box
-          direction="row"
           alignSelf="center"
-          gap={gap(size)}
-          margin={{ bottom: "medium" }}
+          fill="horizontal"
+          pad="small"
+          margin={{ vertical: "medium" }}
         >
-          <Box width={iconSize(size)} height={iconSize(size)}>
-            <Image src={props.image} fit="cover" {...props} />
+          <Box alignSelf="center" direction="row" gap={gap(size)}>
+            <Box width={iconSize(size)} height={iconSize(size)}>
+              <Image src={props.image} fit="cover" {...props} />
+            </Box>
+            <HeaderText {...props}>{props.title}</HeaderText>
           </Box>
-          <HeaderText {...props}>{props.title}</HeaderText>
         </Box>
       )}
     </ResponsiveContext.Consumer>

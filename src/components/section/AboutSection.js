@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Grid, ResponsiveContext } from "grommet";
 import { ContentText, SubtitleText } from "../typography";
-import { SectionContainer } from "./SectionContainer";
+import { SectionBody } from "./SectionBody";
 import RoundedImage from "../widget/RoundedImage";
 
 import { SectionCard } from "../widget/SectionCard";
@@ -36,7 +36,7 @@ export const AboutSection = props => {
   return (
     <ResponsiveContext.Consumer>
       {size => (
-        <SectionContainer>
+        <SectionBody>
           <SectionCard>
             <Grid
               fill="horizontal"
@@ -60,7 +60,7 @@ export const AboutSection = props => {
               </Box>
             </Grid>
           </SectionCard>
-        </SectionContainer>
+        </SectionBody>
       )}
     </ResponsiveContext.Consumer>
   );

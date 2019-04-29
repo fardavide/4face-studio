@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Form, FormField, ResponsiveContext, TextArea } from "grommet";
 
 import PrimaryButton from "../widget/PrimaryButton";
-import { SectionContainer } from "./SectionContainer";
+import { SectionBody } from "./SectionBody";
 import { SectionHeader } from "./SectionHeader";
 
 import { Send } from "grommet-icons";
@@ -30,48 +30,50 @@ export const ContactSection = props => {
   return (
     <ResponsiveContext.Consumer>
       {size => (
-        <SectionContainer>
+        <Box >
           <SectionHeader image={email} title={string("contact.title")} />
-          <Box pad={{ horizontal: horizontalPad(size) }}>
-            <Form onSubmit='contact_me.php'>
-              <FormField
-                name="name"
-                label={string("contact.form.name")}
-                placeholder={string("contact.form.name.hint")}
-                required={true}
-                validate={validateName}
-              />
-              <FormField
-                name="email"
-                label={string("contact.form.email")}
-                placeholder={string("contact.form.email.hint")}
-                required={true}
-                validate={validateEmail}
-              />
-              <FormField
-                name="phone"
-                label={string("contact.form.phone")}
-                placeholder={string("contact.form.phone.hint")}
-              />
-              <FormField
-                name="message"
-                label={string("contact.form.message")}
-                placeholder={string("contact.form.message.hint")}
-                required={true}
-                validate={validateMessage}
-                as={TextArea}
-              />
-              <Box fill="horizontal">
-                <PrimaryButton
-                  type="submit"
-                  label={string("action.send")}
-                  icon={<Send />}
-                  margin="medium"
+          <SectionBody>
+            <Box pad={{ horizontal: horizontalPad(size) }}>
+              <Form onSubmit="contact_me.php">
+                <FormField
+                  name="name"
+                  label={string("contact.form.name")}
+                  placeholder={string("contact.form.name.hint")}
+                  required={true}
+                  validate={validateName}
                 />
-              </Box>
-            </Form>
-          </Box>
-        </SectionContainer>
+                <FormField
+                  name="email"
+                  label={string("contact.form.email")}
+                  placeholder={string("contact.form.email.hint")}
+                  required={true}
+                  validate={validateEmail}
+                />
+                <FormField
+                  name="phone"
+                  label={string("contact.form.phone")}
+                  placeholder={string("contact.form.phone.hint")}
+                />
+                <FormField
+                  name="message"
+                  label={string("contact.form.message")}
+                  placeholder={string("contact.form.message.hint")}
+                  required={true}
+                  validate={validateMessage}
+                  as={TextArea}
+                />
+                <Box fill="horizontal">
+                  <PrimaryButton
+                    type="submit"
+                    label={string("action.send")}
+                    icon={<Send />}
+                    margin="medium"
+                  />
+                </Box>
+              </Form>
+            </Box>
+          </SectionBody>
+        </Box>
       )}
     </ResponsiveContext.Consumer>
   );

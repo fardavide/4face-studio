@@ -11,6 +11,7 @@ const projectType = {
 
 /**
  * The actual list of projects
+ * @type { { string, { string, string}, string, { string, string } } }
  *
  * @author Davide Giuseppe Farella
  */
@@ -31,8 +32,10 @@ const projects = {
   theia: {
     title: "Theia",
     description: {
-      en: "is a _lightweight image loader_ for Android with a **cache system** and built-in **Kotlin DSL**",
-      it: "è un _leggerissimo image loader_ con un sistema di cache e con **Kotlin DSL** integrato"
+      en:
+        "is a **lightweight image loader** for Android with a _cache system_ and built-in **Kotlin DSL**",
+      it:
+        "è un **leggerissimo image loader** con un _sistema di cache_ e con **Kotlin DSL** integrato"
     },
     link: "https://github.com/4face-studi0/Theia",
     type: projectType.lib
@@ -42,8 +45,10 @@ const projects = {
   viewStateStore: {
     title: "View State Store",
     description: {
-      en: "permits to handle an **unidirectional data-flow** to la UI, wrapping a _LiveData_.",
-      it: "permette di gesture un **flusso dati unidirezionale** verso la UI, wrappando un _LiveData_."
+      en:
+        "permits to handle an **unidirectional data-flow** to la UI, wrapping a _LiveData_.",
+      it:
+        "permette di gestire un **flusso dati unidirezionale** verso la UI, wrappando un _LiveData_."
     },
     link: "https://github.com/4face-studi0/ViewStateStore",
     type: projectType.lib
@@ -53,8 +58,10 @@ const projects = {
   materialBottomBar: {
     title: "Material Bottom Bar",
     description: {
-      en: "lets you implement a customized _BottomAppBar_ and a **bottom drawer** with just few simple steps.",
-      it: "permette di implmentare una _BottomAppBar_ custom con un **bottom drawer** in pochi semplici step."
+      en:
+        "lets you implement a customized _BottomAppBar_ and a **bottom drawer** with just few simple steps.",
+      it:
+        "permette di implmentare una _BottomAppBar_ custom con un **bottom drawer** in pochi semplici step."
     },
     link: "https://github.com/4face-studi0/MaterialBottomBar",
     type: projectType.lib
@@ -65,7 +72,7 @@ const projects = {
     title: "Fluent Notifications",
     description: {
       en: "is an idiomatic **Kotlin DSL** for create _Android's Notification_",
-      it: "è un idiomatico **Kotlin DSL** per creare _Notifiche su Android_"
+      it: "è un **Kotlin DSL** idiomatico per creare _Notifiche su Android_"
     },
     link: "https://github.com/4face-studi0/FluentNotifications",
     type: projectType.lib

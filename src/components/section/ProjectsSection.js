@@ -1,22 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Box, Image, ResponsiveContext } from "grommet";
+import {Box, Image, ResponsiveContext} from "grommet";
 
 import Card from "../widget/Card";
 import FlexGrid from "../widget/FlexGrid";
 import PrimaryButton from "../widget/PrimaryButton";
-import { SectionContainer } from "./SectionContainer";
-import { SectionHeader } from "./SectionHeader";
+import {SectionBody} from "./SectionBody";
+import {SectionHeader} from "./SectionHeader";
 
-import { ContentText, LabelText, SubtitleText } from "../typography";
+import {ContentText, LabelText, SubtitleText} from "../typography";
 
-import ProjectsRepository from "../../data/ProjectsRepository";
+import Repository from "../../data/Repository";
 
 import projects from "../../res/images/projects.svg";
 import placeholder_github from "../../res/images/placeholder-github.svg";
-import string, { strings } from "../../res/strings";
-import { openUrlInNewTab } from "../../utils";
+import string, {strings} from "../../res/strings";
+import {openUrlInNewTab} from "../../utils";
 
 /**
  * @return {React.Component} for Projects Section
@@ -37,10 +37,10 @@ export const ProjectsSection = props => {
   };
 
   /**
-   * @return {Project[]} from {ProjectsRepository}
+   * @return {Project[]} from {Repository}
    */
   const projectItems = () =>
-    repository.all().map(project => <Project project={project} />);
+    repository.projects().map(project => <Project project={project} />);
 
   /**
    * @return {string} size of the gap between {Project}s for {FlexGrip}
@@ -66,25 +66,27 @@ export const ProjectsSection = props => {
   return (
     <ResponsiveContext.Consumer>
       {size => (
-        <SectionContainer>
+        <Box>
           <SectionHeader image={projects} title={string("projects.title")} />
-          <FlexGrid
-            gap={projectsGap(size)}
-            items={projectItems()}
-            columnsLimit={maxColumns(size)}
-            rowHeight={projectsRowSize(size)}
-          />
-        </SectionContainer>
+          <SectionBody>
+            <FlexGrid
+              gap={projectsGap(size)}
+              items={projectItems()}
+              columnsLimit={maxColumns(size)}
+              rowHeight={projectsRowSize(size)}
+            />
+          </SectionBody>
+        </Box>
       )}
     </ResponsiveContext.Consumer>
   );
 };
 
 /**
- * A reference to {ProjectsRepository} for retrieve the Projects
- * @type {ProjectsRepository}
+ * A reference to {Repository} for retrieve the Projects
+ * @type {Repository}
  */
-const repository = new ProjectsRepository();
+const repository = new Repository();
 
 /**
  * @return {React.Component} for a single {Project}
@@ -198,7 +200,9 @@ const Project = props => {
               {type()}
               {title()}
             </Box>
-            <Box flex fill='vertical'>{description(size)}</Box>
+            <Box flex fill="vertical">
+              {description(size)}
+            </Box>
             <PrimaryButton
               type="button"
               label={string(strings.action.gitHub)}
