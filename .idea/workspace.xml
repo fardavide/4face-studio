@@ -4,15 +4,9 @@
     <list default="true" id="cd4e70ef-f546-4da6-890e-cd29bb69e8ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Drawer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/section/ContactSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/section/ContactSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/section/ProjectsSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/section/ProjectsSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/section/ReferencesSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/section/ReferencesSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/typography.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/typography.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/widget/FlexGrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/widget/FlexGrid.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/index.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/index.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/strings.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +31,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/App.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="376">
-                  <caret line="56" column="12" lean-forward="true" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
+                <state relative-caret-position="966">
+                  <caret line="59" column="42" lean-forward="true" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
                   </folding>
@@ -49,8 +43,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/Drawer.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="336">
-                  <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
+                <state relative-caret-position="749">
+                  <caret line="90" column="22" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -104,8 +98,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/res/strings.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1222">
-                  <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
+                <state relative-caret-position="307">
+                  <caret line="252" column="31" lean-forward="true" selection-start-line="252" selection-start-column="31" selection-end-line="252" selection-end-column="31" />
                   <folding>
                     <element signature="e#0#89#0" expanded="true" />
                   </folding>
@@ -164,7 +158,6 @@
         <option value="$PROJECT_DIR$/src/components/RoundedImage.js" />
         <option value="$PROJECT_DIR$/src/components/section/ContactSection.test.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/hooks/index.js" />
         <option value="$PROJECT_DIR$/src/components/Footer.js" />
         <option value="$PROJECT_DIR$/src/components/data/ProjectsRepository.test.js" />
@@ -186,7 +179,6 @@
         <option value="$PROJECT_DIR$/src/res/colors.js" />
         <option value="$PROJECT_DIR$/src/components/widget/Card.js" />
         <option value="$PROJECT_DIR$/src/components/section/SectionHeader.js" />
-        <option value="$PROJECT_DIR$/src/res/strings.js" />
         <option value="$PROJECT_DIR$/src/data/ProjectsRepository.js" />
         <option value="$PROJECT_DIR$/src/res/projects.js" />
         <option value="$PROJECT_DIR$/src/data/ReferencesSource.js" />
@@ -206,9 +198,11 @@
         <option value="$PROJECT_DIR$/src/components/widget/FlexGrid.js" />
         <option value="$PROJECT_DIR$/src/components/AppBar.js" />
         <option value="$PROJECT_DIR$/src/components/section/ReferencesSection.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/typography.js" />
+        <option value="$PROJECT_DIR$/src/index.css" />
+        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/Drawer.js" />
+        <option value="$PROJECT_DIR$/src/res/strings.js" />
       </list>
     </option>
   </component>
@@ -254,7 +248,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556635578941" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556638847173" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
@@ -399,7 +393,7 @@
       <workItem from="1556023314166" duration="17933000" />
       <workItem from="1556119238172" duration="23675000" />
       <workItem from="1556211776529" duration="27122000" />
-      <workItem from="1556463049462" duration="28980000" />
+      <workItem from="1556463049462" duration="30895000" />
     </task>
     <task id="LOCAL-00001" summary="FlexGrid">
       <created>1556459371622</created>
@@ -408,7 +402,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556459371622</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implementing Drawer menu">
+      <created>1556635659712</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1556635659712</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -444,7 +445,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119163000" />
+    <option name="totallyTimeSpent" value="121078000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2673" height="2067" extended-state="0" />
@@ -487,12 +488,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="FlexGrid" />
-    <option name="LAST_COMMIT_MESSAGE" value="FlexGrid" />
+    <MESSAGE value="Implementing Drawer menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementing Drawer menu" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/index.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Footer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -836,16 +835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/res/strings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1222">
-          <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#89#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/res/colors.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -867,16 +856,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="419">
           <caret line="17059" column="4" selection-start-line="17059" selection-start-column="4" selection-end-line="17059" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="56" column="12" lean-forward="true" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -917,12 +896,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="59" column="42" lean-forward="true" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Drawer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
+        <state relative-caret-position="749">
+          <caret line="90" column="22" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/res/strings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="252" column="31" lean-forward="true" selection-start-line="252" selection-start-column="31" selection-end-line="252" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#89#0" expanded="true" />
           </folding>
         </state>
       </provider>

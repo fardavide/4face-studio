@@ -35,11 +35,11 @@ const theme = {
  */
 const App = () => {
   /** Reference to {ReferencesSection} */
-  const referencesRef = useRef(null);
+  const referencesRef = useRef();
   /** Reference to {ProjectsSection} */
-  const projectsRef = useRef(null);
+  const projectsRef = useRef();
   /** Reference to {ContactSection} */
-  const contactsRef = useRef(null);
+  const contactsRef = useRef();
 
   /**
    * Whether the website is at the top position or scrolled down
@@ -64,7 +64,7 @@ const App = () => {
     else if (sectionName === "ContactSection") ref = contactsRef;
     else throw Error(`Invalid section name: '${sectionName}'`);
 
-    window.scrollTo(0, ref.current.offsetTop);
+    window.scroll({ top: ref.current.offsetTop - 80, behavior: "smooth" });
   };
 
   return (
@@ -82,9 +82,15 @@ const App = () => {
         />
         <AppBodyContainer>
           <AboutSection />
-          <ReferencesSection ref={referencesRef} />
-          <ProjectsSection ref={projectsRef} />
-          <ContactSection ref={contactsRef} />
+          <div ref={referencesRef}>
+            <ReferencesSection />
+          </div>
+          <div ref={projectsRef}>
+            <ProjectsSection />
+          </div>
+          <div ref={contactsRef}>
+            <ContactSection />
+          </div>
         </AppBodyContainer>
         <Footer />
       </Box>

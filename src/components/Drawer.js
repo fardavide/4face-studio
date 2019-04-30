@@ -88,6 +88,7 @@ export const Drawer = props => {
       direction="row"
       gap="large"
       onClick={() => {
+        onMenuClose();
         onItemClick(sectionName);
       }}
     >

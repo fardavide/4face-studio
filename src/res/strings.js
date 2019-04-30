@@ -244,7 +244,7 @@ export const strings = {
  */
 export default (field, lang) => {
   // Use 'en' as default if 'lang' is not defined
-  if (!lang) lang = "en";
+  if (!lang) lang = currentLang;
 
   let untranslatedString;
   if (isString(field)) untranslatedString = getByString(field);
@@ -283,6 +283,18 @@ const getByString = stringField => {
 };
 
 /**
+ * {Array} of {string} of supported languages
+ * @type {string[]}
+ */
+const supportedLang = ["en", "it"];
+
+/**
+ * The default language
+ * @type {string}
+ */
+const defaultLang = supportedLang[0];
+
+/**
  * Get an untranslated string from a {*} field ( {objField} )
  * @param objField {*} field of the {string} to get
  * @return {Object}
@@ -295,6 +307,23 @@ const getByObject = objField => {
 
   return objField;
 };
+
+/** @return {string} language of the user if in {supportedLang}, else {defaultLang} */
+const userLang = () => {
+  const userLang =
+    navigator.language ||
+    navigator.browserLanguage ||
+    (navigator.languages || ["en"])[0];
+
+  if (supportedLang.includes(userLang)) return userLang;
+  else return defaultLang;
+};
+
+/**
+ * The current language, default value is {userLang}
+ * @type {string}
+ */
+export let currentLang = userLang();
 
 /**
  * Get whether the given {obj} is a {string}
