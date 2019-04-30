@@ -69,7 +69,9 @@ const FlexGrid = props => {
             end: [toColumn, rowIndex]
           });
           boxes.push(
-            <Box gridArea={name}>{items[iteration++]}</Box>
+            <Box key={name} gridArea={name}>
+              {items[iteration++]}
+            </Box>
           );
         }
       }
@@ -146,26 +148,29 @@ export const itemsDisposition = (itemsCount, rowsCount) => {
 };
 
 /**
- * Balance a disposition
+ * Balance a {number[]}
  * @param disposition {number[]} disposition to balance
  * @return {number[]} balanced disposition
  */
 export const balanceDisposition = disposition => {
-  // If has less than 2 elements, return the same array
-  if (disposition.length < 2) return disposition;
+  const newDisposition = [...disposition];
 
-  const lastIndex = disposition.length - 1;
-  const penultimateIndex = disposition.length - 2;
+  // If has less than 2 elements, return the same array
+  if (newDisposition.length < 2) return newDisposition;
+
+  const lastIndex = newDisposition.length - 1;
+  const penultimateIndex = newDisposition.length - 2;
 
   // If difference between last and penultimate index is greater than 1, remove needed amount to penultimate items and
   // add it to last item
-  const difference = disposition[penultimateIndex] - disposition[lastIndex];
+  const difference =
+    newDisposition[penultimateIndex] - newDisposition[lastIndex];
   if (difference > 1) {
-    disposition[penultimateIndex] -= Math.floor(difference / 2);
-    disposition[lastIndex] += Math.ceil(difference / 2);
+    newDisposition[penultimateIndex] -= Math.floor(difference / 2);
+    newDisposition[lastIndex] += Math.ceil(difference / 2);
   }
 
-  return disposition;
+  return newDisposition;
 };
 
 export default FlexGrid;

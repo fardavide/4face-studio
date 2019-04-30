@@ -34,7 +34,7 @@ export const ContactSection = props => {
           <SectionHeader image={email} title={string("contact.title")} />
           <SectionBody>
             <Box pad={{ horizontal: horizontalPad(size) }}>
-              <Form onSubmit="contact_me.php">
+              <Form action="../../../public/mail/contact_me.php">
                 <FormField
                   name="name"
                   label={string("contact.form.name")}

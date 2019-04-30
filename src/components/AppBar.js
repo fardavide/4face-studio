@@ -50,7 +50,7 @@ export const AppBar = props => {
       background={color.background}
       elevation={elevation}
       pad={{ left: "medium", right: "small", vertical: "small" }}
-      style={{ zIndex: "1" }}
+      style={{ zIndex: "9" }}
       {...props}
     >
       <Button icon={menuIcon()} onClick={onMenuClick} />
@@ -66,7 +66,7 @@ export const AppBar = props => {
 };
 
 /** {PropTypes} for {AppBar} */
-AppBar.props = {
+AppBar.propTypes = {
   isAtTop: PropTypes.bool.isRequired,
   isMenuOpen: PropTypes.bool.isRequired,
   onMenuClick: PropTypes.func.isRequired

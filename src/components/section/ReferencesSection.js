@@ -8,7 +8,11 @@ import Chip from "../widget/Chip";
 import Repository from "../../data/Repository";
 import Reference from "../../models/Reference";
 
-import { openUrlInNewTab, splitArrayInChunks } from "../../utils";
+import {
+  balanceArrayChunks,
+  openUrlInNewTab,
+  splitArrayInChunks
+} from "../../utils";
 
 import string, { strings } from "../../res/strings";
 import location from "../../res/images/location.svg";
@@ -21,6 +25,7 @@ import location from "../../res/images/location.svg";
  * @author Davide Giuseppe Farella
  */
 export const ReferencesSection = props => {
+
   /**
    * @return {number} of max {Reference} items for every row
    * @param size {string} screen size
@@ -32,12 +37,32 @@ export const ReferencesSection = props => {
   };
 
   /**
+   * @return {React.Component[]} for a group of References
+   * @param size {string} screen size
+   * @constructor
+   */
+  const ReferencesGroup = size => {
+    const unbalancedReferencesRowsItems = splitArrayInChunks(
+      repository.references(),
+      itemsPerRow(size)
+    );
+    const referencesRowsItems = balanceArrayChunks(
+      unbalancedReferencesRowsItems
+    );
+    return referencesRowsItems.map(referencesRow =>
+      ReferencesRow(referencesRow)
+    );
+  };
+
+  /**
    * @return {React.Component} for a row of {Reference}s model
    * @param references {Reference[]}
    * @constructor
    */
   const ReferencesRow = references => (
-    <Box direction="row">{references.map(ref => ReferenceItem(ref))}</Box>
+    <Box direction="row" alignSelf="center">
+      {references.map(ref => ReferenceItem(ref))}
+    </Box>
   );
 
   /**
@@ -62,12 +87,7 @@ export const ReferencesSection = props => {
             title={string(strings.references.title)}
           />
           <SectionBody>
-            <Box>
-              {splitArrayInChunks(
-                repository.references(),
-                itemsPerRow(size)
-              ).map(chunk => ReferencesRow(chunk))}
-            </Box>
+            {ReferencesGroup(size)}
           </SectionBody>
         </Box>
       )}

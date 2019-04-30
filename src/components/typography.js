@@ -165,7 +165,7 @@ export const TitleText = props => {
           textAlign="center"
           size={textSize(size)}
           weight="bold"
-          color={color.secondary}
+          color={color.onSurface}
           {...props}
         >
           <Markdown {...props} />

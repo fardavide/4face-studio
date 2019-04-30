@@ -255,7 +255,7 @@ const ProjectIcon = props => {
     <ResponsiveContext.Consumer>
       {size => (
         <Box width={iconWidth(size)} height={iconHeight(size)} flex>
-          <Image fit="center" {...props} />
+          <Image fit='content' {...props} />
         </Box>
       )}
     </ResponsiveContext.Consumer>
