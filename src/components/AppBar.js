@@ -1,13 +1,14 @@
 import React, { useRef } from "react";
 import PropTypes from "prop-types";
-import { useToggle } from "../hooks";
 
-import { Box, Button, Drop, Heading } from "grommet";
-import { SubtitleText } from "./typography";
+import { Box, Button, DropButton, Heading } from "grommet";
 
 import { Close, Language, Menu } from "grommet-icons";
+import { ContentText } from "./typography";
+
 import color from "../res/colors";
-import string from "../res/strings";
+import string, { setCurrentLang, supportedLang } from "../res/strings";
+import { useToggle } from "../hooks";
 
 /**
  * A {React.Component} for Top bar of the App
@@ -16,12 +17,6 @@ import string from "../res/strings";
  * @author Davide Giuseppe Farella
  */
 export const AppBar = props => {
-  /** Reference to language's menu button */
-  const languageButtonRef = useRef();
-
-  /** Whether the language's menu needs to be shown */
-  const [showLanguageMenu, setShowLanguageMenu] = useToggle(false);
-
   /**
    * Elevation for {AppBar}
    * @type {string}
@@ -33,6 +28,9 @@ export const AppBar = props => {
    * @type {string} item color for the {AppBar}
    */
   const itemColor = color.onBackground;
+
+  /** Whether the language drop menu should be open */
+  const [isLanguageMenuOpen, toggleLanguageMenu] = useToggle(false);
 
   /**
    * @return the right menu icon whether the menu is open or close
@@ -69,9 +67,20 @@ export const AppBar = props => {
       >
         {string("appName")}
       </Heading>
-      <Box flex ref={languageButtonRef} >
-          <Button alignSelf="end" icon={<Language />} onClick={setShowLanguageMenu} />
-          {showLanguageMenu && <LanguageMenu target={languageButtonRef} />}
+      <Box flex>
+        <DropButton
+          alignSelf="end"
+          icon={<Language />}
+          dropAlign={{ top: "bottom", right: "right" }}
+          open={isLanguageMenuOpen}
+          onClick={toggleLanguageMenu}
+          dropContent={
+            <LanguageMenu
+              onLanguageChange={props.onLanguageChange}
+              closeMenu={toggleLanguageMenu}
+            />
+          }
+        />
       </Box>
     </Box>
   );
@@ -79,20 +88,31 @@ export const AppBar = props => {
 
 /**
  * @return {React.Component} menu for select the language
- * @param target {*} target of the {Drop}
+ * @param onLanguageChange {function} that will be invoked when the language changes
+ * @param closeMenu {function} for close the drop menu
  * @constructor
  */
-const LanguageMenu = target => (
-  <Drop target={target.current}>
-    <Box width="small" height="small" background="red">
-      <SubtitleText>BANANA</SubtitleText>
-    </Box>
-  </Drop>
+const LanguageMenu = ({ onLanguageChange, closeMenu }) => (
+  <Box width="small" justify="center" height="small" gap="small">
+    {supportedLang.map(entry => (
+      <ContentText
+        justify="center"
+        flex
+        onClick={() => {
+          onLanguageChange(entry);
+          closeMenu();
+        }}
+      >
+        {entry.name}
+      </ContentText>
+    ))}
+  </Box>
 );
 
 /** {PropTypes} for {AppBar} */
 AppBar.propTypes = {
   isAtTop: PropTypes.bool.isRequired,
   isMenuOpen: PropTypes.bool.isRequired,
-  onMenuClick: PropTypes.func.isRequired
+  onMenuClick: PropTypes.func.isRequired,
+  onLanguageChange: PropTypes.func.isRequired
 };

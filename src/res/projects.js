@@ -69,7 +69,7 @@ const projects = {
       it:
         "permette di implmentare una _BottomAppBar_ custom con un **bottom drawer** in pochi semplici step.",
       cn:
-        "让你实现自定义的_BottomAppBar_ 以及只需简单的几个步骤就可以完成**底部菜单** 
+        "让你实现自定义的_BottomAppBar_ 以及只需简单的几个步骤就可以完成**底部菜单**"
     },
     link: "https://github.com/4face-studi0/MaterialBottomBar",
     type: projectType.lib
@@ -81,7 +81,7 @@ const projects = {
     description: {
       en: "is an idiomatic **Kotlin DSL** for create _Android's Notification_",
       it: "è un **Kotlin DSL** idiomatico per creare _Notifiche su Android_",
-      cn: "是为了制作安卓提示的一个**Kotlin DSL**语言
+      cn: "是为了制作安卓提示的一个**Kotlin DSL**语言"
     },
     link: "https://github.com/4face-studi0/FluentNotifications",
     type: projectType.lib

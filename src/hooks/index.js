@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
+import {currentLang, setCurrentLang} from "../res/strings";
 
 /**
  * A listener for Checkbox
@@ -9,6 +10,18 @@ export const useCheckbox = initialValue => {
   const [value, setValue] = useState(initialValue);
   const updateValue = event => setValue(event.target.checked);
   return [value, updateValue];
+};
+
+/**
+ * Change the language of the App
+ * @return { function }
+ */
+export const useLanguage = () => {
+  const [_, setValue] = useState(currentLang);
+  return lang => {
+    setCurrentLang(lang);
+    setValue(lang);
+  };
 };
 
 /**

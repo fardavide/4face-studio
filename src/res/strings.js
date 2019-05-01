@@ -31,9 +31,8 @@ export const strings = {
   appName: {
     en: "4face Studio",
     it: "4face Studio",
-    cn:
-      "========== ========== ========== HELE ========== ========== ==========",
-    jp: "========== ========== ========== HELE ========== ========== =========="
+    cn: "4face Studio",
+    jp: "4face Studio"
   },
 
   /** Strings related to common actions. Sorted alphabetically */
@@ -408,19 +407,33 @@ const getByObject = objField => {
   return objField;
 };
 
-/** @return {string} language of the user if in {supportedLang}, else {defaultLang} */
+/**
+ * Return language of the user if in {supportedLang}, else {defaultLang}
+ * @return { { value: string, name: strings } }
+ */
 const userLang = () => {
-  const userLang =
+  let userLang =
     navigator.language ||
     navigator.browserLanguage ||
     (navigator.languages || ["en"])[0];
 
-  if (supportedLang.includes(userLang)) return userLang;
-  else return defaultLang;
+  userLang = userLang.split("-")[0];
+
+  const index = supportedLang.findIndex(lang => lang.value === userLang);
+  if (index === -1) return defaultLang;
+  else return supportedLang[index];
 };
 
 /**
  * The current language, default value is {userLang}
- * @type {string}
+ * @return { { value: string, name: strings } }
  */
 export let currentLang = userLang();
+
+/**
+ * Update {currentLang}
+ * @param lang { { name: string, value: string } } new language to set
+ */
+export const setCurrentLang = lang => {
+  currentLang = lang;
+};

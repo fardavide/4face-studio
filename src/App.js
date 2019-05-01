@@ -1,6 +1,6 @@
-import React, { Component, useRef } from "react";
-import { Box, Grommet } from "grommet";
-import { useToggle, useTopDetector } from "./hooks";
+import React, { Component, useRef, useState } from "react";
+import { Box, Grommet, Text } from "grommet";
+import {useLanguage, useToggle, useTopDetector} from "./hooks";
 
 import { Drawer } from "./components/Drawer";
 import { AppBar } from "./components/AppBar";
@@ -12,7 +12,7 @@ import { ContactSection } from "./components/section/ContactSection";
 import { Footer } from "./components/Footer";
 import { ReferencesSection } from "./components/section/ReferencesSection";
 
-import color from './res/colors'
+import color from "./res/colors";
 
 const theme = {
   button: {
@@ -45,6 +45,9 @@ const App = () => {
   const projectsRef = useRef();
   /** Reference to {ContactSection} */
   const contactsRef = useRef();
+
+  /** A variable in the {Component}s state for refresh the UI when language changes */
+  const setLanguage = useLanguage(true);
 
   /**
    * Whether the website is at the top position or scrolled down
@@ -84,6 +87,7 @@ const App = () => {
           isAtTop={isAtTop}
           isMenuOpen={isMenuOpen}
           onMenuClick={toggleMenuOpen}
+          onLanguageChange={setLanguage}
         />
         <AppBodyContainer>
           <AboutSection />
