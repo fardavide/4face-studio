@@ -413,7 +413,7 @@ const getByObject = objField => {
  */
 const userLang = () => {
   // Create an array with all the values declared in navigator
-  const userLanguages = navigator.languages || [];
+  const userLanguages = [...navigator.languages] || [];
   if (navigator.language) userLanguages.push(navigator.language);
 
   // From all the languages found, match with supportedLang
