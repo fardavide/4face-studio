@@ -412,16 +412,22 @@ const getByObject = objField => {
  * @return { { value: string, name: strings } }
  */
 const userLang = () => {
-  let userLang =
-    navigator.language ||
-    navigator.browserLanguage ||
-    (navigator.languages || ["en"])[0];
+  // Create an array with all the values declared in navigator
+  const userLanguages = navigator.languages || [];
+  if (navigator.language) userLanguages.push(navigator.language);
 
-  userLang = userLang.split("-")[0];
-
-  const index = supportedLang.findIndex(lang => lang.value === userLang);
-  if (index === -1) return defaultLang;
-  else return supportedLang[index];
+  // From all the languages found, match with supportedLang
+  let foundLang = null;
+  userLanguages
+    .map(lang => lang.substring(0, 2))
+    .forEach(user => {
+      const found = supportedLang.find(supported => supported.value === user);
+      if (found) {
+        foundLang = found;
+      }
+    });
+  // Return the found language or the default one
+  return foundLang || defaultLang;
 };
 
 /**
