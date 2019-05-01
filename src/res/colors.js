@@ -63,4 +63,6 @@ const palettes = {
  *
  * @author Davide Giuseppe Farella
  */
-export const color = palettes.vividLight;
+const color = palettes.vividLight;
+
+export default color

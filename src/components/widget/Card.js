@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from "grommet";
 
-import { color } from "../../res/colors";
+import color from "../../res/colors";
 
 /**
  * A Card {Component}

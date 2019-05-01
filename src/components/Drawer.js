@@ -6,7 +6,7 @@ import {HeaderText, TitleText} from "./typography";
 
 import { FormClose } from "grommet-icons";
 
-import { color } from "../res/colors";
+import color from "../res/colors";
 import string, { strings } from "../res/strings";
 
 import email from "../res/images/email.svg";

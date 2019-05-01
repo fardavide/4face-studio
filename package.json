@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "draft-js": "^0.10.5",
     "expect": "^24.7.1",
     "grommet": "^2.6.6",
     "grommet-icons": "^4.2.0",

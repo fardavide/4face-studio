@@ -12,6 +12,8 @@ import { ContactSection } from "./components/section/ContactSection";
 import { Footer } from "./components/Footer";
 import { ReferencesSection } from "./components/section/ReferencesSection";
 
+import color from './res/colors'
+
 const theme = {
   button: {
     border: {
@@ -19,6 +21,9 @@ const theme = {
     }
   },
   global: {
+    colors: {
+      brand: color.primary
+    },
     font: {
       family: "Roboto",
       size: "14px",
@@ -49,9 +54,9 @@ const App = () => {
 
   /**
    * Whether the side menu is open
-   * @type {boolean}
+   * @type boolean
    */
-  const [isMenuOpen, flipValue] = useToggle(false);
+  const [isMenuOpen, toggleMenuOpen] = useToggle(false);
 
   /**
    * Callback when a Menu item is clicked
@@ -72,13 +77,13 @@ const App = () => {
       <Box fill flex>
         <Drawer
           isMenuOpen={isMenuOpen}
-          onMenuClose={flipValue}
+          onMenuClose={toggleMenuOpen}
           onItemClick={onMenuItemClick}
         />
         <AppBar
           isAtTop={isAtTop}
           isMenuOpen={isMenuOpen}
-          onMenuClick={flipValue}
+          onMenuClick={toggleMenuOpen}
         />
         <AppBodyContainer>
           <AboutSection />

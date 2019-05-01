@@ -1,3 +1,4 @@
+/* eslint-disable no-extend-native */
 /**
  * Balance the chunks into an {Array} of {Array}s
  * @param unbalancedArray {Array[]} array to balance
@@ -34,6 +35,14 @@ export const balanceArrayChunks = unbalancedArray => {
   return balancedArray;
 };
 
+
+/**
+ * Get whether the given {obj} is a {string}
+ * @param obj the object to check
+ * @return {boolean} `true` if {obj} is a {string}
+ */
+export const isString = obj => typeof obj === "string" || obj instanceof String;
+
 /**
  * Open the given {url} into a new browser's tab
  * @param url {string} url to open
@@ -56,4 +65,16 @@ export const splitArrayInChunks = (array, chunkSize) => {
     chunks.push(array.slice(i, i + chunkSize));
   }
   return chunks;
+};
+
+
+/**
+ * Replace all the occurrences in a {string}
+ * @param search {string} to replace
+ * @param replacement {string}
+ * @return {string}
+ */
+String.prototype.replaceAll = function(search, replacement) {
+  const target = this;
+  return target.replace(new RegExp(search, "g"), replacement);
 };

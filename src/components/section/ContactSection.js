@@ -1,6 +1,15 @@
 import React from "react";
-import { Box, Form, FormField, ResponsiveContext, TextArea } from "grommet";
+import {useCheckbox, useTextListener, useToggle} from "../../hooks";
+import {
+  Box,
+  CheckBox,
+  Form,
+  FormField,
+  ResponsiveContext,
+  TextArea
+} from "grommet";
 
+import { CaptionText } from "../typography";
 import PrimaryButton from "../widget/PrimaryButton";
 import { SectionBody } from "./SectionBody";
 import { SectionHeader } from "./SectionHeader";
@@ -8,7 +17,8 @@ import { SectionHeader } from "./SectionHeader";
 import { Send } from "grommet-icons";
 
 import email from "../../res/images/email.svg";
-import string from "../../res/strings";
+import color from "../../res/colors";
+import string, { strings } from "../../res/strings";
 
 /**
  * A {React.Component} for Contact Section
@@ -17,6 +27,20 @@ import string from "../../res/strings";
  * @author Davide Giuseppe Farella
  */
 export const ContactSection = props => {
+  /**
+   * Whether the Markdown preview should be visible
+   * @type boolean
+   */
+  const [isMarkdownPreviewVisible, toggleMarkdownPreviewVisibility] = useCheckbox(
+    false
+  );
+
+  /**
+   * The text inside the message Field
+   * @type string
+   */
+  const [messageText, updateMessageText] = useTextListener("");
+
   /**
    * @return {string} horizontal pad of the Form
    * @param size {string} screen size
@@ -30,42 +54,57 @@ export const ContactSection = props => {
   return (
     <ResponsiveContext.Consumer>
       {size => (
-        <Box >
-          <SectionHeader image={email} title={string("contact.title")} />
+        <Box>
+          <SectionHeader image={email} title={string(strings.contact.title)} />
           <SectionBody>
             <Box pad={{ horizontal: horizontalPad(size) }}>
               <Form action="../../../public/mail/contact_me.php">
                 <FormField
                   name="name"
-                  label={string("contact.form.name")}
-                  placeholder={string("contact.form.name.hint")}
+                  label={string(strings.contact.form.name)}
+                  placeholder={string(strings.contact.form.name.hint)}
                   required={true}
                   validate={validateName}
                 />
                 <FormField
                   name="email"
-                  label={string("contact.form.email")}
-                  placeholder={string("contact.form.email.hint")}
+                  label={string(strings.contact.form.email)}
+                  placeholder={string(strings.contact.form.email.hint)}
                   required={true}
                   validate={validateEmail}
                 />
                 <FormField
                   name="phone"
-                  label={string("contact.form.phone")}
-                  placeholder={string("contact.form.phone.hint")}
+                  label={string(strings.contact.form.phone)}
+                  placeholder={string(strings.contact.form.phone.hint)}
                 />
                 <FormField
                   name="message"
-                  label={string("contact.form.message")}
-                  placeholder={string("contact.form.message.hint")}
+                  label={string(strings.contact.form.message)}
+                  placeholder={string(strings.contact.form.message.hint)}
                   required={true}
                   validate={validateMessage}
+                  onChange={updateMessageText}
                   as={TextArea}
                 />
+                <Box margin="small">
+                  <CheckBox
+                    checked={isMarkdownPreviewVisible}
+                    label={string(strings.action.useMarkdown)}
+                    onChange={toggleMarkdownPreviewVisibility}
+                  />
+                </Box>
+                {isMarkdownPreviewVisible && (
+                  <Box background={color.surface} pad="small">
+                    <CaptionText alignSelf="start" textAlign="start">
+                      {messageText}
+                    </CaptionText>
+                  </Box>
+                )}
                 <Box fill="horizontal">
                   <PrimaryButton
                     type="submit"
-                    label={string("action.send")}
+                    label={string(strings.action.send)}
                     icon={<Send />}
                     margin="medium"
                   />

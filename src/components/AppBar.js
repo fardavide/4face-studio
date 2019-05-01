@@ -4,7 +4,7 @@ import { Box, Button, Heading } from "grommet";
 
 import { Close, Menu } from "grommet-icons";
 
-import { color } from "../res/colors";
+import color from "../res/colors";
 import string from "../res/strings";
 
 /**

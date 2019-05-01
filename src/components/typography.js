@@ -1,7 +1,7 @@
 import React from "react";
 import { Markdown, ResponsiveContext, Text } from "grommet";
 
-import { color } from "../res/colors";
+import color from "../res/colors";
 
 /**
  * A {React.Component} for Caption Text
@@ -28,7 +28,7 @@ export const CaptionText = props => {
           size={textSize(size)}
           {...props}
         >
-          <Markdown {...props} />
+          <Markdown>{props.children.replaceAll("\n", "\n\n")}</Markdown>
         </Text>
       )}
     </ResponsiveContext.Consumer>
@@ -59,7 +59,7 @@ export const ContentText = props => {
           size={textSize(size)}
           {...props}
         >
-          <Markdown {...props} />
+          <Markdown>{props.children}</Markdown>
         </Text>
       )}
     </ResponsiveContext.Consumer>
@@ -168,7 +168,7 @@ export const TitleText = props => {
           color={color.onSurface}
           {...props}
         >
-          <Markdown {...props} />
+          <Markdown>{props.children}</Markdown>
         </Text>
       )}
     </ResponsiveContext.Consumer>

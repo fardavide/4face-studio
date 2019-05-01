@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "grommet";
 
-import { color } from "../../res/colors";
+import color from "../../res/colors";
 
 /**
  * A primary Button {Component}

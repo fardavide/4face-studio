@@ -3,7 +3,7 @@ import { Box } from "grommet";
 
 import { CaptionText } from "./typography";
 
-import { color } from "../res/colors";
+import color from "../res/colors";
 import string from "../res/strings";
 
 /**

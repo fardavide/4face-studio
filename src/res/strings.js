@@ -2,6 +2,7 @@ import {
   StringNotDefinedError,
   TranslationNotDefinedError
 } from "../errors/errors";
+import { isString } from "../utils";
 
 /**
  * {string}s for our App.
@@ -29,18 +30,30 @@ export const strings = {
   /** The name of our App */
   appName: {
     en: "4face Studio",
-    it: "4face Studio"
+    it: "4face Studio",
+    cn: "========== ========== ========== HELE ========== ========== ==========",
+    jp: "========== ========== ========== HELE ========== ========== =========="
   },
 
   /** Strings related to common actions. Sorted alphabetically */
   action: {
     send: {
       en: "Send",
-      it: "Invia"
+      it: "Invia",
+      cn: "========== ========== ========== HELE ========== ========== ==========",
+      jp: "========== ========== ========== HELE ========== ========== =========="
     },
     gitHub: {
       en: "Open on GitHub",
-      it: "Apri su GitHub"
+      it: "Apri su GitHub",
+      cn: "========== ========== ========== HELE ========== ========== ==========",
+      jp: "========== ========== ========== HELE ========== ========== =========="
+    },
+    useMarkdown: {
+      en: "Use Markdown",
+      it: "Usa Markdown",
+      cn: "========== ========== ========== HELE ========== ========== ==========",
+      jp: "========== ========== ========== HELE ========== ========== =========="
     }
   },
 
@@ -49,19 +62,25 @@ export const strings = {
     /** Title of the About section */
     title: {
       en: "About me",
-      it: "Su di me"
+      it: "Su di me",
+      cn: "========== ========== ========== HELE ========== ========== ==========",
+      jp: "========== ========== ========== HELE ========== ========== =========="
     },
 
     /** A short description of the developer */
     headline: {
       en: "Freelance Android developer and Kotlin lover ❤️",
-      it: "Sviluppatore Android freelance ed amante di Kotlin ❤️"
+      it: "Sviluppatore Android freelance ed amante di Kotlin ❤️",
+      cn: "========== ========== ========== HELE ========== ========== ==========",
+      jp: "========== ========== ========== HELE ========== ========== =========="
     },
 
     /** A long description about the developer */
     bio: {
       en: `I'm _Davide Giuseppe Farella_, I'm 27 years old and I'm a **freelance Android developer** from Italy. I also have so knowledge about _Javascript_, in fact I developed this website with _React JS_. I am a **Kotlin** lover and I love to play it for take it to the limit. I believe in the **Open Source** and I released few libraries on **Github**`,
-      it: `Sono _Davide Giuseppe Farella_, ho 27 anni e sono uno **sviluppatore Android freelance** dall'Italia. Ho anche qualche competenza circa _Javascript_, infatti ho scritto questo sito con _React JS_. Sono un amante di **Kotlin** ed amo giocarci per portarlo fino al limite. Credo nell'**Open Source** ed ho rilasciato qualche libreria su **Github**`
+      it: `Sono _Davide Giuseppe Farella_, ho 27 anni e sono uno **sviluppatore Android freelance** dall'Italia. Ho anche qualche competenza circa _Javascript_, infatti ho scritto questo sito con _React JS_. Sono un amante di **Kotlin** ed amo giocarci per portarlo fino al limite. Credo nell'**Open Source** ed ho rilasciato qualche libreria su **Github**`,
+      cn: "========== ========== ========== HELE ========== ========== ==========",
+      jp: "========== ========== ========== HELE ========== ========== =========="
     }
   },
 
@@ -70,7 +89,9 @@ export const strings = {
     /** Title of References section */
     title: {
       en: "Where to find me",
-      it: "Dove trovarmi"
+      it: "Dove trovarmi",
+      cn: "========== ========== ========== HELE ========== ========== ==========",
+      jp: "========== ========== ========== HELE ========== ========== =========="
     }
   },
 
@@ -79,7 +100,9 @@ export const strings = {
     /** Title of Projects section */
     title: {
       en: "My Projects",
-      it: "I miei progetti"
+      it: "I miei progetti",
+      cn: "========== ========== ========== HELE ========== ========== ==========",
+      jp: "========== ========== ========== HELE ========== ========== =========="
     }
   },
 
@@ -88,7 +111,9 @@ export const strings = {
     /** Title of Contact section */
     title: {
       en: "Contact me",
-      it: "Contattami"
+      it: "Contattami",
+      cn: "========== ========== ========== HELE ========== ========== ==========",
+      jp: "========== ========== ========== HELE ========== ========== =========="
     },
 
     /** Strings related to the Contact form */
@@ -97,28 +122,38 @@ export const strings = {
       name: {
         en: "Name",
         it: "Nome",
+        cn: "========== ========== ========== HELE ========== ========== ==========",
+        jp: "========== ========== ========== HELE ========== ========== ==========",
 
         /** Errors of Name */
         error: {
           /** When Name is empty */
           empty: {
             en: "Name is required",
-            it: "Il nome è richiesto"
+            it: "Il nome è richiesto",
+            cn: "========== ========== ========== HELE ========== ========== ==========",
+            jp: "========== ========== ========== HELE ========== ========== =========="
           },
           fullName: {
             en: "Insert name and surname",
-            it: "Inserisci nome e cognome"
+            it: "Inserisci nome e cognome",
+            cn: "========== ========== ========== HELE ========== ========== ==========",
+            jp: "========== ========== ========== HELE ========== ========== =========="
           },
           /** When Name is too short */
           short: {
             en: "Name too short",
-            it: "Nome troppo corto"
+            it: "Nome troppo corto",
+            cn: "========== ========== ========== HELE ========== ========== ==========",
+            jp: "========== ========== ========== HELE ========== ========== =========="
           }
         },
         /** Hint for Name */
         hint: {
           en: "Type your full name",
-          it: "Inserisci il tuo nome completo"
+          it: "Inserisci il tuo nome completo",
+          cn: "========== ========== ========== HELE ========== ========== ==========",
+          jp: "========== ========== ========== HELE ========== ========== =========="
         }
       },
 
@@ -126,31 +161,41 @@ export const strings = {
       email: {
         en: "Email",
         it: "Email",
+        cn: "========== ========== ========== HELE ========== ========== ==========",
+        jp: "========== ========== ========== HELE ========== ========== ==========",
 
         /** Errors of Email */
         error: {
           /** When Email is empty */
           empty: {
             en: "Email il required",
-            it: "L'email è richiesta"
+            it: "L'email è richiesta",
+            cn: "========== ========== ========== HELE ========== ========== ==========",
+            jp: "========== ========== ========== HELE ========== ========== =========="
           },
           /** When Email has a bad format */
           badFormat: {
             en: "Check the format of Email",
-            it: "Controlla il formato dell'Email"
+            it: "Controlla il formato dell'Email",
+            cn: "========== ========== ========== HELE ========== ========== ==========",
+            jp: "========== ========== ========== HELE ========== ========== =========="
           }
         },
 
         /** Hint for Email */
         hint: {
           en: "Type your email",
-          it: "Inserisci la tua email"
+          it: "Inserisci la tua email",
+          cn: "========== ========== ========== HELE ========== ========== ==========",
+          jp: "========== ========== ========== HELE ========== ========== =========="
         },
 
         /** A regex for validate the email */
         regex: {
           en: "\\w+@\\w+\\.\\w{2}",
-          it: "\\w+@\\w+\\.\\w{2}"
+          it: "\\w+@\\w+\\.\\w{2}",
+          cn: "\\w+@\\w+\\.\\w{2}",
+          jp: "\\w+@\\w+\\.\\w{2}"
         }
       },
 
@@ -158,24 +203,32 @@ export const strings = {
       phone: {
         en: "Phone Number ( optional )",
         it: "Numero di telefono ( opzionale )",
+        cn: "========== ========== ========== HELE ========== ========== ==========",
+        jp: "========== ========== ========== HELE ========== ========== ==========",
 
         /** Errors of Phone */
         error: {
           short: {
             en: "",
-            it: ""
+            it: "",
+            cn: "",
+            jp: ""
           },
           /** When Phone has a bad format */
           badFormat: {
             en: "Check the format of Phone",
-            it: "Controlla il formato del Numero"
+            it: "Controlla il formato del Numero",
+            cn: "========== ========== ========== HELE ========== ========== ==========",
+            jp: "========== ========== ========== HELE ========== ========== =========="
           }
         },
 
         /** Hint for Phone */
         hint: {
           en: "Type your phone number",
-          it: "Inserisci il tuo numero di telefono"
+          it: "Inserisci il tuo numero di telefono",
+          cn: "========== ========== ========== HELE ========== ========== ==========",
+          jp: "========== ========== ========== HELE ========== ========== =========="
         }
       },
 
@@ -183,30 +236,40 @@ export const strings = {
       message: {
         en: "Message",
         it: "Messaggio",
+        cn: "========== ========== ========== HELE ========== ========== ==========",
+        jp: "========== ========== ========== HELE ========== ========== ==========",
 
         /** Errors of Message */
         error: {
           /** When Message is empty */
           empty: {
             en: "Message is required",
-            it: "Il messaggio è richiesto"
+            it: "Il messaggio è richiesto",
+            cn: "========== ========== ========== HELE ========== ========== ==========",
+            jp: "========== ========== ========== HELE ========== ========== =========="
           },
           /** When Message is too short */
           short: {
             plural: {
               en: "More %d characters required",
-              it: "Altri %d caratteri richiesti"
+              it: "Altri %d caratteri richiesti",
+              cn: "========== ========== ========== HELE ========== ========== ==========",
+              jp: "========== ========== ========== HELE ========== ========== =========="
             },
             singular: {
               en: "One more character required",
-              it: "Un altro carattere richiesto"
+              it: "Un altro carattere richiesto",
+              cn: "========== ========== ========== HELE ========== ========== ==========",
+              jp: "========== ========== ========== HELE ========== ========== =========="
             }
           }
         },
         /** Hint for Message */
         hint: {
           en: "Type a message",
-          it: "Inserisci un messaggio"
+          it: "Inserisci un messaggio",
+          cn: "========== ========== ========== HELE ========== ========== ==========",
+          jp: "========== ========== ========== HELE ========== ========== =========="
         }
       }
     }
@@ -217,13 +280,17 @@ export const strings = {
     /** Credits about the website */
     credits: {
       en: "Developed and designed by 4face Studio with React js",
-      it: "Sviluppato e disegnato da 4face Studio con React js"
+      it: "Sviluppato e disegnato da 4face Studio con React js",
+      cn: "========== ========== ========== HELE ========== ========== ==========",
+      jp: "========== ========== ========== HELE ========== ========== =========="
     },
 
     /** Copyright info */
     copyright: {
       en: "Copyright © 4face Studio 2019",
-      it: "Copyright © 4face Studio 2019"
+      it: "Copyright © 4face Studio 2019",
+      cn: "Copyright © 4face Studio 2019",
+      jp: "Copyright © 4face Studio 2019"
     }
   }
 };
@@ -286,7 +353,7 @@ const getByString = stringField => {
  * {Array} of {string} of supported languages
  * @type {string[]}
  */
-const supportedLang = ["en", "it"];
+export const supportedLang = ["en", "it"];
 
 /**
  * The default language
@@ -324,10 +391,3 @@ const userLang = () => {
  * @type {string}
  */
 export let currentLang = userLang();
-
-/**
- * Get whether the given {obj} is a {string}
- * @param obj the object to check
- * @return {boolean} `true` if {obj} is a {string}
- */
-const isString = obj => typeof obj === "string" || obj instanceof String;
