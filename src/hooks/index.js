@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
  */
 export const useCheckbox = initialValue => {
   const [value, setValue] = useState(initialValue);
-  const updateValue = (event) => setValue(event.target.checked);
+  const updateValue = event => setValue(event.target.checked);
   return [value, updateValue];
 };
 
@@ -18,7 +18,7 @@ export const useCheckbox = initialValue => {
  */
 export const useTextListener = initialValue => {
   const [value, setValue] = useState(initialValue);
-  const updateValue = (event) => setValue(event.target.value);
+  const updateValue = event => setValue(event.target.value);
   return [value, updateValue];
 };
 
@@ -29,7 +29,7 @@ export const useTextListener = initialValue => {
  */
 export const useToggle = initialValue => {
   const [value, setValue] = useState(initialValue);
-  const flipValue = (optionalValue = !value) => setValue(optionalValue);
+  const flipValue = () => setValue(!value);
   return [value, flipValue];
 };
 

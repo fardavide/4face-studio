@@ -16,7 +16,8 @@ const references = {
   linkedIn: {
     name: {
       en: "LikedIn profile",
-      it: "Profilo LinkedIn"
+      it: "Profilo LinkedIn",
+      cn: "HELE"
     },
     icon: linkedInIcon,
     link: "https://www.linkedin.com/in/davide-giuseppe-farella-ba81a861/"
@@ -26,7 +27,8 @@ const references = {
   twitter: {
     name: {
       en: "Twitter profile",
-      it: "Profilo Twitter"
+      it: "Profilo Twitter",
+      cn: "HELE"
     },
     icon: twitterIcon,
     link: "https://twitter.com/4face91"
@@ -36,7 +38,8 @@ const references = {
   github: {
     name: {
       en: "GitHub projects",
-      it: "Progetti su GitHub"
+      it: "Progetti su GitHub",
+      cn: "HELE"
     },
     icon: githubIcon,
     link: "https://github.com/4face-studi0"
@@ -46,7 +49,8 @@ const references = {
   medium: {
     name: {
       en: "Medium Stories",
-      it: "Storie su Medium"
+      it: "Storie su Medium",
+      cn: "HELE"
     },
     icon: mediumIcon,
     link: "https://medium.com/@fardavide"
@@ -56,7 +60,8 @@ const references = {
   adiSlack: {
     name: {
       en: "Android community on Slack",
-      it: "Comunità Android su Slack"
+      it: "Comunità Android su Slack",
+      cn: "HELE"
     },
     icon: slackIcon,
     link: "https://androiddevsitaly.slack.com"
@@ -66,7 +71,8 @@ const references = {
   kotlinSlack: {
     name: {
       en: "Kotlin community on Slack",
-      it: "Comunità Kotlin su Slack"
+      it: "Comunità Kotlin su Slack",
+      cn: "HELE"
     },
     icon: slackIcon,
     link: "https://kotlinlang.slack.com"
@@ -76,7 +82,8 @@ const references = {
   reddit: {
     name: {
       en: "Reddit profile",
-      it: "Profilo Reddit"
+      it: "Profilo Reddit",
+      cn: "HELE"
     },
     icon: redditIcon,
     link: "https://www.reddit.com/user/4face91"
