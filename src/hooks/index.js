@@ -1,5 +1,5 @@
-import {useEffect, useState} from "react";
-import {currentLang, setCurrentLang} from "../res/strings";
+import { useEffect, useState } from "react";
+import { currentLang, setCurrentLang } from "../res/strings";
 
 /**
  * A listener for Checkbox
@@ -36,8 +36,23 @@ export const useTextListener = initialValue => {
 };
 
 /**
- * Flip a {boolean} value
- * @param initialValue {boolean} default value
+ * Set a {*} value for the state, if the value is not {defaultValue}, set {defaultValue} after the declared {millis}
+ * @param defaultValue {*} initial and default value, it will be set every time after {millis}
+ * @param millis {number} milliseconds before restore {defaultValue}
+ */
+export const useTimeout = (defaultValue, millis) => {
+  const [value, setValue] = useState(defaultValue);
+  const updateValue = newValue => {
+    setValue(newValue);
+    if (newValue !== defaultValue)
+      setTimeout(() => setValue(defaultValue), millis);
+  };
+  return [value, updateValue]
+};
+
+/**
+ * Flip a {boolean} value for the state
+ * @param initialValue {boolean} initial value
  * @return { [ boolean, function ] }
  */
 export const useToggle = initialValue => {

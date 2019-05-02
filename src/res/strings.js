@@ -41,23 +41,42 @@ export const strings = {
       en: "Send",
       it: "Invia",
       cn: "发送",
-      jp:
-        "========== ========== ========== HELE ========== ========== =========="
+      jp: "========== ========== ========== HELE ========== ========== =========="
     },
     gitHub: {
       en: "Open on GitHub",
       it: "Apri su GitHub",
       cn: "在GitHub打开",
-      jp:
-        "========== ========== ========== HELE ========== ========== =========="
+      jp: "========== ========== ========== HELE ========== ========== =========="
     },
     useMarkdown: {
       en: "Use Markdown",
       it: "Usa Markdown",
       cn: "使用Markdown",
-      jp:
-        "========== ========== ========== HELE ========== ========== =========="
+      jp: "========== ========== ========== HELE ========== ========== =========="
     }
+  },
+
+  /** A set of common messages */
+  message: {
+    completed:{
+      en: 'Completed',
+      it: 'Completato',
+      cn: '',
+      jp: ''
+    },
+    error:{
+      en: 'Error',
+      it: 'Errore',
+      cn: '',
+      jp: ''
+    },
+    sending:{
+      en: 'Sending',
+      it: 'Inviando',
+      cn: '',
+      jp: ''
+    },
   },
 
   /** About section */
@@ -67,8 +86,7 @@ export const strings = {
       en: "About me",
       it: "Su di me",
       cn: "关于我",
-      jp:
-        "========== ========== ========== HELE ========== ========== =========="
+      jp: "========== ========== ========== HELE ========== ========== =========="
     },
 
     /** A short description of the developer */
@@ -76,8 +94,7 @@ export const strings = {
       en: "Freelance Android developer and Kotlin lover ❤️",
       it: "Sviluppatore Android freelance ed amante di Kotlin ❤️",
       cn: "安卓自主者 kotlin爱好者♥️",
-      jp:
-        "========== ========== ========== HELE ========== ========== =========="
+      jp: "========== ========== ========== HELE ========== ========== =========="
     },
 
     /** A long description about the developer */
@@ -85,8 +102,7 @@ export const strings = {
       en: `I'm _Davide Giuseppe Farella_, I'm 27 years old and I'm a **freelance Android developer** from Italy. I also have so knowledge about _Javascript_, in fact I developed this website with _React JS_. I am a **Kotlin** lover and I love to play it for take it to the limit. I believe in the **Open Source** and I released few libraries on **Github**`,
       it: `Sono _Davide Giuseppe Farella_, ho 27 anni e sono uno **sviluppatore Android freelance** dall'Italia. Ho anche qualche competenza circa _Javascript_, infatti ho scritto questo sito con _React JS_. Sono un amante di **Kotlin** ed amo giocarci per portarlo fino al limite. Credo nell'**Open Source** ed ho rilasciato qualche libreria su **Github**`,
       cn: `我是_Davide Giuseppe Farella_,今年27岁，是一名来自意大利的**安卓程序开发员**。并且我也懂得使用_Javascript_，事实上我运用_React JS_开发了这个网站。我热衷于**Kotlin**，并且运用它发挥到极致。并且我乐意在**Github**上创建**Open Source**供大家分享`,
-      jp:
-        "========== ========== ========== HELE ========== ========== =========="
+      jp: "========== ========== ========== HELE ========== ========== =========="
     }
   },
 
@@ -97,8 +113,7 @@ export const strings = {
       en: "Where to find me",
       it: "Dove trovarmi",
       cn: "如何找到我",
-      jp:
-        "========== ========== ========== HELE ========== ========== =========="
+      jp: "========== ========== ========== HELE ========== ========== =========="
     }
   },
 
@@ -109,8 +124,7 @@ export const strings = {
       en: "My Projects",
       it: "I miei progetti",
       cn: "我的项目",
-      jp:
-        "========== ========== ========== HELE ========== ========== =========="
+      jp: "========== ========== ========== HELE ========== ========== =========="
     }
   },
 
@@ -121,8 +135,7 @@ export const strings = {
       en: "Contact me",
       it: "Contattami",
       cn: "联系我",
-      jp:
-        "========== ========== ========== HELE ========== ========== =========="
+      jp: "========== ========== ========== HELE ========== ========== =========="
     },
 
     /** Strings related to the Contact form */
@@ -133,7 +146,7 @@ export const strings = {
         it: "Nome",
         cn: "名字",
         jp:
-          "========== ========== ========== HELE ========== ========== ==========",
+          "==================== ========== HELE ========== ========== ==========",
 
         /** Errors of Name */
         error: {
@@ -142,23 +155,20 @@ export const strings = {
             en: "Name is required",
             it: "Il nome è richiesto",
             cn: "名字必须填写",
-            jp:
-              "========== ========== ========== HELE ========== ========== =========="
+            jp: "========== ========== ========== HELE ========== ========== =========="
           },
           fullName: {
             en: "Insert name and surname",
             it: "Inserisci nome e cognome",
             cn: "填写姓名",
-            jp:
-              "========== ========== ========== HELE ========== ========== =========="
+            jp: "========== ========== ========== HELE ========== ========== =========="
           },
           /** When Name is too short */
           short: {
             en: "Name too short",
             it: "Nome troppo corto",
             cn: "用户名太短",
-            jp:
-              "========== ========== ========== HELE ========== ========== =========="
+            jp: "========== ========== ========== HELE ========== ========== =========="
           }
         },
         /** Hint for Name */
@@ -166,8 +176,7 @@ export const strings = {
           en: "Type your full name",
           it: "Inserisci il tuo nome completo",
           cn: "填写全名",
-          jp:
-            "========== ========== ========== HELE ========== ========== =========="
+          jp: "========== ========== ========== HELE ========== ========== =========="
         }
       },
 
@@ -177,7 +186,7 @@ export const strings = {
         it: "Email",
         cn: "邮箱",
         jp:
-          "========== ========== ========== HELE ========== ========== ==========",
+          "==================== ========== HELE ========== ========== ==========",
 
         /** Errors of Email */
         error: {
@@ -186,16 +195,14 @@ export const strings = {
             en: "Email il required",
             it: "L'email è richiesta",
             cn: "必须填写邮箱",
-            jp:
-              "========== ========== ========== HELE ========== ========== =========="
+            jp: "========== ========== ========== HELE ========== ========== =========="
           },
           /** When Email has a bad format */
           badFormat: {
             en: "Check the format of Email",
             it: "Controlla il formato dell'Email",
             cn: "请填写正确的邮箱格式",
-            jp:
-              "========== ========== ========== HELE ========== ========== =========="
+            jp: "========== ========== ========== HELE ========== ========== =========="
           }
         },
 
@@ -204,8 +211,7 @@ export const strings = {
           en: "Type your email",
           it: "Inserisci la tua email",
           cn: "填写你的邮箱",
-          jp:
-            "========== ========== ========== HELE ========== ========== =========="
+          jp: "========== ========== ========== HELE ========== ========== =========="
         },
 
         /** A regex for validate the email */
@@ -223,7 +229,7 @@ export const strings = {
         it: "Numero di telefono ( opzionale )",
         cn: "电话号码",
         jp:
-          "========== ========== ========== HELE ========== ========== ==========",
+          "==================== ========== HELE ========== ========== ==========",
 
         /** Errors of Phone */
         error: {
@@ -238,8 +244,7 @@ export const strings = {
             en: "Check the format of Phone",
             it: "Controlla il formato del Numero",
             cn: "请检查电话号码的格式",
-            jp:
-              "========== ========== ========== HELE ========== ========== =========="
+            jp: "========== ========== ========== HELE ========== ========== =========="
           }
         },
 
@@ -248,8 +253,7 @@ export const strings = {
           en: "Type your phone number",
           it: "Inserisci il tuo numero di telefono",
           cn: "请填写你的电话号码",
-          jp:
-            "========== ========== ========== HELE ========== ========== =========="
+          jp: "========== ========== ========== HELE ========== ========== =========="
         }
       },
 
@@ -259,7 +263,7 @@ export const strings = {
         it: "Messaggio",
         cn: "信息",
         jp:
-          "========== ========== ========== HELE ========== ========== ==========",
+          "==================== ========== HELE ========== ========== ==========",
 
         /** Errors of Message */
         error: {
@@ -268,8 +272,7 @@ export const strings = {
             en: "Message is required",
             it: "Il messaggio è richiesto",
             cn: "必须填写信息",
-            jp:
-              "========== ========== ========== HELE ========== ========== =========="
+            jp: "========== ========== ========== HELE ========== ========== =========="
           },
           /** When Message is too short */
           short: {
@@ -277,15 +280,13 @@ export const strings = {
               en: "More %d characters required",
               it: "Altri %d caratteri richiesti",
               cn: "还剩 %d 字数",
-              jp:
-                "========== ========== ========== HELE ========== ========== =========="
+              jp: "========== ========== ========== HELE ========== ========== =========="
             },
             singular: {
               en: "One more character required",
               it: "Un altro carattere richiesto",
               cn: "再加1个字数",
-              jp:
-                "========== ========== ========== HELE ========== ========== =========="
+              jp: "========== ========== ========== HELE ========== ========== =========="
             }
           }
         },
@@ -294,8 +295,7 @@ export const strings = {
           en: "Type a message",
           it: "Inserisci un messaggio",
           cn: "输入信息",
-          jp:
-            "========== ========== ========== HELE ========== ========== =========="
+          jp: "========== ========== ========== HELE ========== ========== =========="
         }
       }
     }
@@ -308,8 +308,7 @@ export const strings = {
       en: "Developed and designed by 4face Studio with React js",
       it: "Sviluppato e disegnato da 4face Studio con React js",
       cn: "由4face Studio运用React js制作与设计",
-      jp:
-        "========== ========== ========== HELE ========== ========== =========="
+      jp: "========== ========== ========== HELE ========== ========== =========="
     },
 
     /** Copyright info */

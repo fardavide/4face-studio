@@ -20,7 +20,10 @@ class Palette {
     background,
     onBackground,
     surface,
-    onSurface
+    onSurface,
+    success,
+    warning,
+    error
   ) {
     this.primary = primary;
     this.secondary = secondary;
@@ -29,6 +32,9 @@ class Palette {
     this.onBackground = onBackground;
     this.surface = surface;
     this.onSurface = onSurface;
+    this.success = success;
+    this.warning = warning;
+    this.error = error;
   }
 }
 
@@ -44,7 +50,10 @@ const palettes = {
     "#FAFAFA",
     "#444444",
     "#FFFFFF",
-    "#666666"
+    "#666666",
+    "#00C781",
+    "#FFAA15",
+    "#FF4040"
   ),
   vividDark: new Palette(
     "#00A3ED",
@@ -53,7 +62,10 @@ const palettes = {
     "#272727",
     "#EEEEEE",
     "#444444",
-    "#FDFDFD"
+    "#FDFDFD",
+    "#00C781",
+    "#FFAA15",
+    "#FF4040"
   )
 };
 

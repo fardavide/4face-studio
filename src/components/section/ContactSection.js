@@ -1,5 +1,6 @@
+/* eslint-disable default-case */
 import React from "react";
-import {useCheckbox, useTextListener, useToggle} from "../../hooks";
+import { useCheckbox, useTextListener, useTimeout } from "../../hooks";
 import {
   Box,
   CheckBox,
@@ -14,7 +15,7 @@ import PrimaryButton from "../widget/PrimaryButton";
 import { SectionBody } from "./SectionBody";
 import { SectionHeader } from "./SectionHeader";
 
-import { Send } from "grommet-icons";
+import { Checkmark, Close, Send } from "grommet-icons";
 
 import email from "../../res/images/email.svg";
 import color from "../../res/colors";
@@ -27,13 +28,20 @@ import string, { strings } from "../../res/strings";
  * @author Davide Giuseppe Farella
  */
 export const ContactSection = props => {
+  /** A state for the form */
+  const [formState, setFormState] = useTimeout(
+    FormState.idle && FormState.pending,
+    3000
+  );
+
   /**
    * Whether the Markdown preview should be visible
    * @type boolean
    */
-  const [isMarkdownPreviewVisible, toggleMarkdownPreviewVisibility] = useCheckbox(
-    false
-  );
+  const [
+    isMarkdownPreviewVisible,
+    toggleMarkdownPreviewVisibility
+  ] = useCheckbox(false);
 
   /**
    * The text inside the message Field
@@ -46,9 +54,109 @@ export const ContactSection = props => {
    * @param size {string} screen size
    */
   const horizontalPad = size => {
-    if (size === "large") return "25%";
-    else if (size === "medium") return "20%";
-    else if (size === "small") return "10%";
+    switch (size) {
+      case "large":
+        return "25%";
+      case "medium":
+        return "20%";
+      case "small":
+        return "10%";
+    }
+  };
+
+  /**
+   * The style of the {SubmitButton} regarding {formState}
+   * @return {{icon: *, label: string, colors: {border, background, text: string}}|{icon: *, label: string, colors: {border, background, text}}}
+   */
+  const submitButtonStyle = () => {
+    switch (formState) {
+      case FormState.idle:
+        return {
+          colors: {
+            background: color.surface,
+            border: color.primary,
+            text: color.onSurface
+          },
+          icon: <Send />,
+          label: string(strings.action.send)
+        };
+
+      case FormState.pending:
+        return {
+          colors: {
+            background: color.warning,
+            border: color.background,
+            text: "white"
+          },
+          icon: <Box />,
+          label: string(strings.message.sending)
+        };
+
+      case FormState.sent:
+        return {
+          colors: {
+            background: color.success,
+            border: color.background,
+            text: "white"
+          },
+          icon: <Checkmark color="white" />,
+          label: string(strings.message.completed)
+        };
+
+      case FormState.error:
+        return {
+          colors: {
+            background: color.error,
+            border: color.background,
+            text: "white"
+          },
+          icon: <Close color="white" />,
+          label: string(strings.message.error)
+        };
+    }
+  };
+
+  /**
+   * @return {React.Component} for the Submit button.
+   * @constructor
+   */
+  const SubmitButton = () => {
+    const style = submitButtonStyle();
+    return (
+      <Box fill="horizontal">
+        <PrimaryButton
+          type="submit"
+          style={{
+            background: style.colors.background,
+            color: style.colors.text
+          }}
+          color={style.colors.border}
+          label={style.label}
+          icon={style.icon}
+          margin="medium"
+        />
+      </Box>
+    );
+  };
+
+  /**
+   * Send the email from the Form
+   * @param data {*} Form data
+   */
+  const sendEmail = data => {
+    //const path = "/public/mail/contact_me.php";
+    const path = "/public/mail/contact_me.php"; // TODO change path in production
+    const config = {
+      method: "POST",
+      body: JSON.stringify(data.value)
+    };
+    fetch(path, config)
+      .then(response => response.json())
+      .then(json => console.log(json)) // TODO
+      .catch(error => {
+        console.log(error);
+        setFormState(FormState.error);
+      });
   };
 
   return (
@@ -58,7 +166,7 @@ export const ContactSection = props => {
           <SectionHeader image={email} title={string(strings.contact.title)} />
           <SectionBody>
             <Box pad={{ horizontal: horizontalPad(size) }}>
-              <Form action="../../../public/mail/contact_me.php">
+              <Form onSubmit={sendEmail}>
                 <FormField
                   name="name"
                   label={string(strings.contact.form.name)}
@@ -101,14 +209,7 @@ export const ContactSection = props => {
                     </CaptionText>
                   </Box>
                 )}
-                <Box fill="horizontal">
-                  <PrimaryButton
-                    type="submit"
-                    label={string(strings.action.send)}
-                    icon={<Send />}
-                    margin="medium"
-                  />
-                </Box>
+                <SubmitButton />
               </Form>
             </Box>
           </SectionBody>
@@ -117,6 +218,12 @@ export const ContactSection = props => {
     </ResponsiveContext.Consumer>
   );
 };
+
+/**
+ * An enum from the state of the form, across the email sending
+ * @type { { idle: number, pending: number, error: number, sent: number } }
+ */
+const FormState = Object.freeze({ idle: 0, pending: 1, sent: 2, error: 3 });
 
 // noinspection JSUnusedLocalSymbols // form not used
 /**

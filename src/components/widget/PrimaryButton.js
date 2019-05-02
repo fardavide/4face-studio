@@ -16,8 +16,8 @@ const PrimaryButton = props => (
     margin="small"
     fill={false}
     alignSelf="end"
-    {...props}
     style={{ zIndex: "1", background: color.surface }}
+    {...props}
   />
 );
 
