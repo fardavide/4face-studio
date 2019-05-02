@@ -62,19 +62,19 @@ export const strings = {
     completed:{
       en: 'Completed',
       it: 'Completato',
-      cn: '',
+      cn: '完成',
       jp: ''
     },
     error:{
       en: 'Error',
       it: 'Errore',
-      cn: '',
+      cn: '错误',
       jp: ''
     },
     sending:{
       en: 'Sending',
       it: 'Inviando',
-      cn: '',
+      cn: '发送中',
       jp: ''
     },
   },
