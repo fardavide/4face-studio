@@ -39,15 +39,20 @@ export const useTextListener = initialValue => {
  * Set a {*} value for the state, if the value is not {defaultValue}, set {defaultValue} after the declared {millis}
  * @param defaultValue {*} initial and default value, it will be set every time after {millis}
  * @param millis {number} milliseconds before restore {defaultValue}
+ * @param unstableValues {*|*[]} An object or an Array of value that needs to return to {defaultValue} after {millis}
  */
-export const useTimeout = (defaultValue, millis) => {
+export const useTimeout = ({ defaultValue, millis, unstableValues }) => {
   const [value, setValue] = useState(defaultValue);
   const updateValue = newValue => {
     setValue(newValue);
-    if (newValue !== defaultValue)
-      setTimeout(() => setValue(defaultValue), millis);
+    try {
+      if (unstableValues === newValue || unstableValues.includes(newValue))
+        setTimeout(() => setValue(defaultValue), millis);
+    } catch (e) {
+      console.log(e);
+    }
   };
-  return [value, updateValue]
+  return [value, updateValue];
 };
 
 /**

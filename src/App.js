@@ -47,7 +47,7 @@ const App = () => {
   const contactsRef = useRef();
 
   /** A variable in the {Component}s state for refresh the UI when language changes */
-  const setLanguage = useLanguage(true);
+  const setLanguage = useLanguage();
 
   /**
    * Whether the website is at the top position or scrolled down

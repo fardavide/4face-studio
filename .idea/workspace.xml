@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cd4e70ef-f546-4da6-890e-cd29bb69e8ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/section/ContactSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/section/ContactSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/section/ContactSection.sample.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/widget/PrimaryButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/widget/PrimaryButton.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hooks/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/colors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/strings.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,7 +25,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/res/colors.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1029">
+                <state relative-caret-position="1260">
                   <caret line="60" column="14" lean-forward="true" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
                 </state>
               </provider>
@@ -37,8 +34,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/App.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="525">
-                  <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
+                <state relative-caret-position="838">
+                  <caret line="97" column="31" lean-forward="true" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
                   <folding>
                     <element signature="e#0#59#0" expanded="true" />
                   </folding>
@@ -46,11 +43,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/hooks/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="624">
-                  <caret line="35" column="2" lean-forward="true" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
+                <state relative-caret-position="378">
+                  <caret line="18" selection-start-line="18" selection-end-line="24" selection-end-column="2" />
                   <folding>
                     <element signature="e#0#44#0" expanded="true" />
                   </folding>
@@ -58,14 +55,14 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/section/ContactSection.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="380">
-                  <caret line="39" column="51" lean-forward="true" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
+                <state relative-caret-position="391">
+                  <caret line="107" column="10" lean-forward="true" selection-start-line="107" selection-start-column="10" selection-end-line="107" selection-end-column="10" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
-                    <element signature="e#34#74#0" expanded="true" />
+                    <element signature="e#34#60#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -87,7 +84,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/res/strings.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1244">
+                <state relative-caret-position="412">
                   <caret line="75" column="21" lean-forward="true" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
                   <folding>
                     <element signature="e#0#89#0" expanded="true" />
@@ -173,7 +170,6 @@
         <option value="$PROJECT_DIR$/src/components/typography.js" />
         <option value="$PROJECT_DIR$/src/res/references.js" />
         <option value="$PROJECT_DIR$/src/res/projects.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/AppBar.js" />
         <option value="$PROJECT_DIR$/src/utils/detectBrowserLanguage.js" />
         <option value="$PROJECT_DIR$/src/components/section/ContactSection.sample.js" />
@@ -182,6 +178,7 @@
         <option value="$PROJECT_DIR$/src/components/widget/PrimaryButton.js" />
         <option value="$PROJECT_DIR$/src/hooks/index.js" />
         <option value="$PROJECT_DIR$/src/components/section/ContactSection.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
       </list>
     </option>
   </component>
@@ -355,7 +352,7 @@
       <workItem from="1556211776529" duration="27122000" />
       <workItem from="1556463049462" duration="47050000" />
       <workItem from="1556731121661" duration="1458000" />
-      <workItem from="1556732752602" duration="8369000" />
+      <workItem from="1556732752602" duration="10602000" />
     </task>
     <task id="LOCAL-00001" summary="FlexGrid">
       <created>1556459371622</created>
@@ -449,7 +446,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147060000" />
+    <option name="totallyTimeSpent" value="149293000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2673" height="2067" extended-state="0" />
@@ -852,16 +849,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/detectBrowserLanguage.js" />
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/section/ProjectsSection.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1217">
@@ -889,16 +876,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/res/colors.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1029">
-          <caret line="60" column="14" lean-forward="true" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/res/strings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1244">
+        <state relative-caret-position="412">
           <caret line="75" column="21" lean-forward="true" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
           <folding>
             <element signature="e#0#89#0" expanded="true" />
@@ -923,23 +903,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hooks/index.js">
+    <entry file="file://$PROJECT_DIR$/src/res/colors.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="35" column="2" lean-forward="true" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1260">
+          <caret line="60" column="14" lean-forward="true" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/section/ContactSection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="39" column="51" lean-forward="true" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
+        <state relative-caret-position="391">
+          <caret line="107" column="10" lean-forward="true" selection-start-line="107" selection-start-column="10" selection-end-line="107" selection-end-column="10" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#34#74#0" expanded="true" />
+            <element signature="e#34#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="838">
+          <caret line="97" column="31" lean-forward="true" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hooks/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" selection-start-line="18" selection-end-line="24" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>

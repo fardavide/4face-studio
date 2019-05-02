@@ -29,10 +29,11 @@ import string, { strings } from "../../res/strings";
  */
 export const ContactSection = props => {
   /** A state for the form */
-  const [formState, setFormState] = useTimeout(
-    FormState.idle && FormState.pending,
-    3000
-  );
+  const [formState, setFormState] = useTimeout({
+    defaultValue: FormState.idle,
+    millis: 3000,
+    unstableValues: [FormState.error]
+  });
 
   /**
    * Whether the Markdown preview should be visible
@@ -66,7 +67,7 @@ export const ContactSection = props => {
 
   /**
    * The style of the {SubmitButton} regarding {formState}
-   * @return {{icon: *, label: string, colors: {border, background, text: string}}|{icon: *, label: string, colors: {border, background, text}}}
+   * @return {{icon: *, disabled: boolean, label: string, colors: {border, background, text: string}}|{icon: *, disabled: boolean, label: string, colors: {border, background, text}}}
    */
   const submitButtonStyle = () => {
     switch (formState) {
@@ -78,7 +79,8 @@ export const ContactSection = props => {
             text: color.onSurface
           },
           icon: <Send />,
-          label: string(strings.action.send)
+          label: string(strings.action.send),
+          disabled: false
         };
 
       case FormState.pending:
@@ -89,7 +91,8 @@ export const ContactSection = props => {
             text: "white"
           },
           icon: <Box />,
-          label: string(strings.message.sending)
+          label: string(strings.message.sending),
+          disabled: true
         };
 
       case FormState.sent:
@@ -100,7 +103,8 @@ export const ContactSection = props => {
             text: "white"
           },
           icon: <Checkmark color="white" />,
-          label: string(strings.message.completed)
+          label: string(strings.message.completed),
+          disabled: true
         };
 
       case FormState.error:
@@ -111,7 +115,8 @@ export const ContactSection = props => {
             text: "white"
           },
           icon: <Close color="white" />,
-          label: string(strings.message.error)
+          label: string(strings.message.error),
+          disabled: true
         };
     }
   };
@@ -126,6 +131,7 @@ export const ContactSection = props => {
       <Box fill="horizontal">
         <PrimaryButton
           type="submit"
+          disabled={style.disabled}
           style={{
             background: style.colors.background,
             color: style.colors.text
