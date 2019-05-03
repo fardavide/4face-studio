@@ -17,7 +17,7 @@ const references = {
     name: {
       en: "LikedIn profile",
       it: "Profilo LinkedIn",
-      cn: "领英个人简介简介"
+      cn: "领英"
     },
     icon: linkedInIcon,
     link: "https://www.linkedin.com/in/davide-giuseppe-farella-ba81a861/"
@@ -28,7 +28,7 @@ const references = {
     name: {
       en: "Twitter profile",
       it: "Profilo Twitter",
-      cn: "Twitter个人简介"
+      cn: "Twitter"
     },
     icon: twitterIcon,
     link: "https://twitter.com/4face91"
