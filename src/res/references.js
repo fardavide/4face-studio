@@ -18,7 +18,7 @@ const references = {
       en: "LikedIn profile",
       it: "Profilo LinkedIn",
       cn: "领英",
-      jp: ""
+      jp: "LikedIn"
     },
     icon: linkedInIcon,
     link: "https://www.linkedin.com/in/davide-giuseppe-farella-ba81a861/"
@@ -30,7 +30,7 @@ const references = {
       en: "Twitter profile",
       it: "Profilo Twitter",
       cn: "Twitter",
-      jp: ""
+      jp: "Twitter"
     },
     icon: twitterIcon,
     link: "https://twitter.com/4face91"
@@ -42,7 +42,7 @@ const references = {
       en: "GitHub projects",
       it: "Progetti su GitHub",
       cn: "GitHub项目",
-      jp: ""
+      jp: "GitHubプロジェクト"
     },
     icon: githubIcon,
     link: "https://github.com/4face-studi0"
@@ -54,7 +54,7 @@ const references = {
       en: "Medium Stories",
       it: "Storie su Medium",
       cn: "Medium故事",
-      jp: ""
+      jp: "Mediumストーリー"
     },
     icon: mediumIcon,
     link: "https://medium.com/@fardavide"
@@ -66,7 +66,7 @@ const references = {
       en: "Android community on Slack",
       it: "Comunità Android su Slack",
       cn: "Slack安卓交流",
-      jp: ""
+      jp: "Slackでのアンドロイドコミュニティ"
     },
     icon: slackIcon,
     link: "https://androiddevsitaly.slack.com"
@@ -78,7 +78,7 @@ const references = {
       en: "Kotlin community on Slack",
       it: "Comunità Kotlin su Slack",
       cn: "Slack Kotlin交流",
-      jp: ""
+      jp: "SlackでのKotlinコミュニティ"
     },
     icon: slackIcon,
     link: "https://kotlinlang.slack.com"
@@ -90,7 +90,7 @@ const references = {
       en: "Reddit profile",
       it: "Profilo Reddit",
       cn: "Reddit个人简介",
-      jp: ""
+      jp: "Redditプロフィール"
     },
     icon: redditIcon,
     link: "https://www.reddit.com/user/4face91"
