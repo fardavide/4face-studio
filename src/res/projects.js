@@ -22,7 +22,7 @@ const projects = {
     description: {
       en: `is an app for watch **IPTV**, born with the goal of create a new app, simple for every one and with a _"FRESH"_ design!`,
       it: `è un app per guardare l'**IPTV**, nata con l'obiettivo di creare una nuova app, semplice per chiunque e con uno stile _"FRESH"_!`,
-      cn: `是一个可以观看**IPTV**的手机软件, 以创建新应用程序为目标而生,_"FRESH"_ 的设计更简单更实用`,
+      cn: `可以观看**IPTV**的手机软件, 以创建新应用程序为目标而生,_"FRESH"_ 的设计更简单更实用`,
     },
     icon: freshTvIcon,
     link: "https://github.com/4face-studi0/FreshTv-android",
@@ -38,7 +38,7 @@ const projects = {
       it:
         "è un **leggerissimo image loader** con un _sistema di cache_ e con **Kotlin DSL** integrato",
       cn: 
-        "是一个**轻巧型图像加载程序** 适用于带有高速缓存系统以及**Kotlin DSL**的安卓系统",
+        "**轻巧型图像加载程序** 适用于带有高速缓存系统以及**Kotlin DSL**的安卓系统",
       
     },
     link: "https://github.com/4face-studi0/Theia",
@@ -81,7 +81,7 @@ const projects = {
     description: {
       en: "is an idiomatic **Kotlin DSL** for create _Android's Notification_",
       it: "è un **Kotlin DSL** idiomatico per creare _Notifiche su Android_",
-      cn: "是为了制作安卓提示的一个**Kotlin DSL**语言"
+      cn: "为了制作安卓提示的一个**Kotlin DSL**语言"
     },
     link: "https://github.com/4face-studi0/FluentNotifications",
     type: projectType.lib
