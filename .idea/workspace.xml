@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd4e70ef-f546-4da6-890e-cd29bb69e8ca" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/davide.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/davide.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mail/contact_me.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/mail/contact_me.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/section/ContactSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/section/ContactSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/strings.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,7 +27,7 @@
             <entry file="file://$PROJECT_DIR$/src/res/colors.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="1260">
-                  <caret line="60" column="14" lean-forward="true" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
+                  <caret line="60" column="14" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
                 </state>
               </provider>
             </entry>
@@ -35,7 +36,7 @@
             <entry file="file://$PROJECT_DIR$/src/App.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="838">
-                  <caret line="97" column="31" lean-forward="true" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
+                  <caret line="97" column="31" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
                   <folding>
                     <element signature="e#0#59#0" expanded="true" />
                   </folding>
@@ -43,10 +44,10 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/hooks/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="378">
+                <state relative-caret-position="42">
                   <caret line="18" selection-start-line="18" selection-end-line="24" selection-end-column="2" />
                   <folding>
                     <element signature="e#0#44#0" expanded="true" />
@@ -58,21 +59,20 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/section/ContactSection.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="107" column="10" lean-forward="true" selection-start-line="107" selection-start-column="10" selection-end-line="107" selection-end-column="10" />
+                <state relative-caret-position="42">
+                  <caret line="2" selection-start-line="2" selection-end-line="2" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
-                    <element signature="e#34#60#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/mail/contact_me.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="525">
-                  <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+                <state relative-caret-position="840">
+                  <caret line="40" column="2" lean-forward="true" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="2" />
                 </state>
               </provider>
             </entry>
@@ -84,8 +84,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/res/strings.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="412">
-                  <caret line="75" column="21" lean-forward="true" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
+                <state relative-caret-position="42">
+                  <caret line="147" column="17" selection-start-line="147" selection-start-column="17" selection-end-line="147" selection-end-column="17" />
                   <folding>
                     <element signature="e#0#89#0" expanded="true" />
                   </folding>
@@ -143,7 +143,6 @@
         <option value="$PROJECT_DIR$/src/components/widget/MarkdownTextArea.js" />
         <option value="$PROJECT_DIR$/src/data/ProjectsSource.test.js" />
         <option value="$PROJECT_DIR$/src/components/section/ProjectsSection.test.js" />
-        <option value="$PROJECT_DIR$/public/mail/contact_me.php" />
         <option value="$PROJECT_DIR$/src/components/widget/SectionCard.js" />
         <option value="$PROJECT_DIR$/src/components/widget/RoundedImage.js" />
         <option value="$PROJECT_DIR$/src/components/section/AboutSection.js" />
@@ -174,11 +173,12 @@
         <option value="$PROJECT_DIR$/src/utils/detectBrowserLanguage.js" />
         <option value="$PROJECT_DIR$/src/components/section/ContactSection.sample.js" />
         <option value="$PROJECT_DIR$/src/res/colors.js" />
-        <option value="$PROJECT_DIR$/src/res/strings.js" />
         <option value="$PROJECT_DIR$/src/components/widget/PrimaryButton.js" />
         <option value="$PROJECT_DIR$/src/hooks/index.js" />
-        <option value="$PROJECT_DIR$/src/components/section/ContactSection.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/res/strings.js" />
+        <option value="$PROJECT_DIR$/src/components/section/ContactSection.js" />
+        <option value="$PROJECT_DIR$/public/mail/contact_me.php" />
       </list>
     </option>
   </component>
@@ -195,7 +195,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="4face-studio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="4face-studio" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
@@ -352,7 +362,7 @@
       <workItem from="1556211776529" duration="27122000" />
       <workItem from="1556463049462" duration="47050000" />
       <workItem from="1556731121661" duration="1458000" />
-      <workItem from="1556732752602" duration="10602000" />
+      <workItem from="1556732752602" duration="22350000" />
     </task>
     <task id="LOCAL-00001" summary="FlexGrid">
       <created>1556459371622</created>
@@ -446,7 +456,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149293000" />
+    <option name="totallyTimeSpent" value="161041000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2673" height="2067" extended-state="0" />
@@ -499,14 +509,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="ContactSection sample" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/errors/errors.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/ProjectsRepository.test.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/grommet/es6/components/FormField/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -876,16 +878,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/res/strings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="75" column="21" lean-forward="true" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#89#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/widget/PrimaryButton.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -896,48 +888,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/mail/contact_me.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/res/colors.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1260">
-          <caret line="60" column="14" lean-forward="true" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/section/ContactSection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="107" column="10" lean-forward="true" selection-start-line="107" selection-start-column="10" selection-end-line="107" selection-end-column="10" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#34#60#0" expanded="true" />
-          </folding>
+          <caret line="60" column="14" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="838">
-          <caret line="97" column="31" lean-forward="true" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
+          <caret line="97" column="31" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/res/strings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="147" column="17" selection-start-line="147" selection-start-column="17" selection-end-line="147" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#89#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/hooks/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
+        <state relative-caret-position="42">
           <caret line="18" selection-start-line="18" selection-end-line="24" selection-end-column="2" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/section/ContactSection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/mail/contact_me.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="40" column="2" lean-forward="true" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="2" />
         </state>
       </provider>
     </entry>

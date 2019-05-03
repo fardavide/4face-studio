@@ -145,8 +145,7 @@ export const strings = {
         en: "Name",
         it: "Nome",
         cn: "名字",
-        jp: "名前"
-          "==================== ========== HELE ========== ========== ==========",
+        jp: "名前",
 
         /** Errors of Name */
         error: {

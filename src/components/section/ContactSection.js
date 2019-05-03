@@ -150,18 +150,21 @@ export const ContactSection = props => {
    * @param data {*} Form data
    */
   const sendEmail = data => {
-    //const path = "/public/mail/contact_me.php";
-    const path = "/public/mail/contact_me.php"; // TODO change path in production
+    setFormState(FormState.pending);
+    const path = "http://4face.studio/mail/contact_me.php"; // TODO fix path
     const config = {
       method: "POST",
+      headers: { "content-type": "application/json; charset=UTF-8" },
       body: JSON.stringify(data.value)
     };
     fetch(path, config)
-      .then(response => response.json())
-      .then(json => console.log(json)) // TODO
-      .catch(error => {
-        console.log(error);
-        setFormState(FormState.error);
+      .then(response => {
+        if (response.status === 200) setFormState(FormState.sent);
+        else setFormState(FormState.error);
+        return response.json();
+      })
+      .then(json => {
+        console.log(json);
       });
   };
 
