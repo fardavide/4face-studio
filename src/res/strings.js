@@ -93,7 +93,7 @@ export const strings = {
     headline: {
       en: "Freelance Android developer and Kotlin lover ❤️",
       it: "Sviluppatore Android freelance ed amante di Kotlin ❤️",
-      cn: "安卓自主者 kotlin爱好者❤️",
+      cn: "安卓程序员 & kotlin爱好者❤️",
       jp: "アンドロイドのフリーランス＆Kotlin好き❤️"
     },
 
@@ -101,7 +101,7 @@ export const strings = {
     bio: {
       en: `I'm _Davide Giuseppe Farella_, I'm 27 years old and I'm a **freelance Android developer** from Italy. I also have so knowledge about _Javascript_, in fact I developed this website with _React JS_. I am a **Kotlin** lover and I love to play it for take it to the limit. I believe in the **Open Source** and I released few libraries on **Github**`,
       it: `Sono _Davide Giuseppe Farella_, ho 27 anni e sono uno **sviluppatore Android freelance** dall'Italia. Ho anche qualche competenza circa _Javascript_, infatti ho scritto questo sito con _React JS_. Sono un amante di **Kotlin** ed amo giocarci per portarlo fino al limite. Credo nell'**Open Source** ed ho rilasciato qualche libreria su **Github**`,
-      cn: `我是_Davide Giuseppe Farella_,今年27岁，是一名来自意大利的**安卓程序开发员**。并且我也懂得使用_Javascript_，事实上我运用_React JS_开发了这个网站。我热衷于**Kotlin**，并且运用它发挥到极致。并且我乐意在**Github**上创建**Open Source**供大家分享`,
+      cn: `我叫_Davide Giuseppe Farella_，今年27岁，是一名来自意大利的**安卓程序开发员**。我也懂得使用_Javascript_，事实上我用_React JS_开发了这个网站。我热衷于使用**Kotlin**，并且我也十分乐意在**Github**上创建**Open Source**供大家分享`,
       jp: "私は_Davide Giuseppe Farella_です。今年は２７歳、イタリア人です。私はアンドロイド開発者としてフリーランスのエンジニアをしてます。_Javascript_も使えますし、実は_React JS_で私がこのホームページを作成した。**Kotlin**好きで、それを極めて使います。そして**Github**上で**Open Source**を作って、皆さんとシェアすることも楽しみです。"
     }
   },
